@@ -1,8 +1,43 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
+.navBar {
+  background-color: rgb(109, 109, 129);
+  text-align: center;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+}
+
+.navItems {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.homeBlock {
+  margin: 50px;
+  padding: 20px;
+  background-color: aqua;
+  position: absolute;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +70,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

@@ -8,15 +8,20 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <nav>
-        <div>
-          <Link to="/">Home</Link>
+      <nav className="navBar">
+        <div className='header'>
+          <h1>ClotheNation</h1>
         </div>
-        <div>
-          <Link to="/Account">Account</Link>
-        </div>
-        <div>
-          <Link to="/Marketplace">Marketplace</Link>
+        <div className='navItems'>
+          <div className="homeBtn">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="accBtn">
+            <Link to="/Account">Account</Link>
+          </div>
+          <div className="marketBtn">
+            <Link to="/Marketplace">Marketplace</Link>
+          </div>
         </div>
         <div>
           {/* This will be where Login the modal is (Once it is set up) */}
