@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import Home from "./components/Home.js"
+import Account from "./components/Account.js"
+import Marketplace from "./components/Marketplace.js"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <nav>
+        <div>
+          <Link to="/">Home</Link>
+        </div>
+        <div>
+          <Link to="/Account">Account</Link>
+        </div>
+        <div>
+          <Link to="/Marketplace">Marketplace</Link>
+        </div>
+        <div>
+          {/* This will be where Login the modal is (Once it is set up) */}
+        </div>
+      </nav>
+      <Routes>
+        <Route path='/' element = {<Home/>}></Route>
+        <Route path='/Account' element = {<Account/>}></Route>
+        <Route path='/Marketplace' element = {<Marketplace/>}></Route>
+      </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
