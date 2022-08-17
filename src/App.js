@@ -2,6 +2,8 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home.js"
 import Account from "./components/Account.js"
 import Marketplace from "./components/Marketplace.js"
+import LoginSignUpModal from "./components/Modals/LoginSignUpModal.js"
+import { useState } from 'react';
 import { Header1 } from './styles/Header.style'
 import { Titles } from './styles/Title.style'
 import './App.css';
@@ -9,11 +11,18 @@ import { Navlinks, Li1 } from './styles/Navlinks.style.js';
 import { Button } from './styles/Button.style';
 import { H1 } from './styles/Text.style';
 
-function App() {
+
+function App(props) {
+
+  const [show, setShow] = useState(false)
+  // const [login, setLogin] = useState([])
+  const [loggedIn, setLoggedIn] = useState(false)
+
   return (
+    // <body>
     <div className="App">
       <Titles>Clothe Nation</Titles>
-      <body>
+      
       <BrowserRouter>
       <nav className="navBar">
         <Header1>
@@ -25,22 +34,23 @@ function App() {
             <Li1><Link to="/Account">Account</Link></Li1>
             <Li1><Link to="/Marketplace">Marketplace</Link></Li1>
           </Navlinks>
-          <a href="#"><Button>LogIn</Button></a>
+          <a href="#" id='open-button' onClick={() => setShow(true)}><Button>LogIn</Button></a>
         </Header1>
-          
         <div>
-          {/* This will be where Login the modal is (Once it is set up) */}
+          <button id='open-button' onClick={() => setShow(true)}>Login/SignUp</button>
         </div>
+
+        <LoginSignUpModal title = "Login/SignUp" onClose = {() => setShow(false)} show = {show} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
       </nav>
       <Routes>
-        <Route path='/' element = {<Home/>}></Route>
+        <Route path='/' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
         <Route path='/Account' element = {<Account/>}></Route>
         <Route path='/Marketplace' element = {<Marketplace/>}></Route>
       </Routes>
       </BrowserRouter>
-    </body>
+   
     </div>
-    
+    //  </body>
   );
 }
 
