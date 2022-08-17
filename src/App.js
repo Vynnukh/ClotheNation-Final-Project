@@ -2,27 +2,32 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home.js"
 import Account from "./components/Account.js"
 import Marketplace from "./components/Marketplace.js"
+import { Header1 } from './styles/Header.style'
+import { Titles } from './styles/Title.style'
 import './App.css';
+import { Navlinks, Li1 } from './styles/Navlinks.style.js';
+import { Button } from './styles/Button.style';
+import { H1 } from './styles/Text.style';
 
 function App() {
   return (
     <div className="App">
+      <Titles>Clothe Nation</Titles>
+      <body>
       <BrowserRouter>
       <nav className="navBar">
-        <div className='header'>
-          <h1>ClotheNation</h1>
-        </div>
-        <div className='navItems'>
-          <div className="homeBtn">
-            <Link to="/">Home</Link>
+        <Header1>
+          <div>
+            <H1>Clothe Nation</H1>
           </div>
-          <div className="accBtn">
-            <Link to="/Account">Account</Link>
-          </div>
-          <div className="marketBtn">
-            <Link to="/Marketplace">Marketplace</Link>
-          </div>
-        </div>
+          <Navlinks>
+            <Li1><Link to="/">Home</Link></Li1>
+            <Li1><Link to="/Account">Account</Link></Li1>
+            <Li1><Link to="/Marketplace">Marketplace</Link></Li1>
+          </Navlinks>
+          <a href="#"><Button>LogIn</Button></a>
+        </Header1>
+          
         <div>
           {/* This will be where Login the modal is (Once it is set up) */}
         </div>
@@ -33,8 +38,9 @@ function App() {
         <Route path='/Marketplace' element = {<Marketplace/>}></Route>
       </Routes>
       </BrowserRouter>
-      
+    </body>
     </div>
+    
   );
 }
 
