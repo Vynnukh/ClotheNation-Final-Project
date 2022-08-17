@@ -91,6 +91,58 @@
 
 
 
+.card-container {
+  background-color: rgb(150, 105, 105);
+  margin: 20px;
+  padding: 5px;
+  outline: 2px rgb(101, 101, 101) solid;  
+  box-shadow: 3px 6px;
+  transition: 0.6s ease-in-out;
+  font-family: 'Inconsolata', monospace;
+
+  width: 300px;
+}
+
+.card-container:hover {
+  transform: scale(1.02);
+  box-shadow: 4px 7px;
+}
+
+.card-image {
+  height: 150px;
+  overflow:visible;
+}
+
+.card-title {
+  font-size: 25px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.addButton {
+  padding: 10px;
+  background-color: #aeabab;
+}
+
+.addButton:hover {
+  cursor: pointer;
+  background-color: rgb(71, 177, 223);
+}
+
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+
+
 
 
 
