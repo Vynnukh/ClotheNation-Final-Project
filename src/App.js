@@ -27,14 +27,14 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-function App() {
+
 
   return (
-    // <body>
+  
     <div className="App">
 
       <GlobalStyle />
-      <body>
+      
 
       <BrowserRouter>
       <nav className="navBar">
@@ -63,7 +63,7 @@ function App() {
       </BrowserRouter>
    
     </div>
-    //  </body>
+    
   );
 }
 
