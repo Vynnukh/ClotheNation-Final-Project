@@ -1,12 +1,13 @@
 import {useState, useEffect} from "react";
+import { Divhome } from '../styles/Divs.style';
 
 const Home = () => {
 
     return (
-        <div className="homeBlock">
+        <Divhome>
             <h1>Welcome to ClotheNation</h1>
             <p>Please Sign-Up or Login to browse the store</p>
-        </div>
+        </Divhome>
     )
 }
 

@@ -5,33 +5,38 @@ import Marketplace from "./components/Marketplace.js"
 import { Header1 } from './styles/Header.style'
 import { Titles } from './styles/Title.style'
 import './App.css';
-import { Navlinks, Li1 } from './styles/Navlinks.style.js';
-import { Button } from './styles/Button.style';
-import { H1 } from './styles/Text.style';
+import { Navlinks, Li1, Navbar1 } from './styles/Navlinks.style.js';
+import { Button, Button2 } from './styles/Button.style';
+import { H1,H2 } from './styles/Text.style';
+import stevepp3 from './styles/Images/stevepp3.jpg';
+import { Divimg } from './styles/Divs.style';
 
 function App() {
   return (
     <div className="App">
-      <Titles>Clothe Nation</Titles>
       <body>
       <BrowserRouter>
-      <nav className="navBar">
+      <Navbar1>
         <Header1>
-          <div>
+          <Divimg>
+            <img src={stevepp3} alt='logo'/>
+            </Divimg>
             <H1>Clothe Nation</H1>
-          </div>
+          
           <Navlinks>
-            <Li1><Link to="/">Home</Link></Li1>
-            <Li1><Link to="/Account">Account</Link></Li1>
-            <Li1><Link to="/Marketplace">Marketplace</Link></Li1>
+            <Li1><Link to="/"><H2>Home</H2></Link></Li1>
+            <Li1><Link to="/Account"><H2>Account</H2></Link></Li1>
+            <Li1><Link to="/Marketplace"><H2>Marketplace</H2></Link></Li1>
+            
           </Navlinks>
           <a href="#"><Button>LogIn</Button></a>
+          
         </Header1>
           
         <div>
           {/* This will be where Login the modal is (Once it is set up) */}
         </div>
-      </nav>
+      </Navbar1>
       <Routes>
         <Route path='/' element = {<Home/>}></Route>
         <Route path='/Account' element = {<Account/>}></Route>

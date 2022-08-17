@@ -1,5 +1,7 @@
 import { useEffect, useState} from "react"
 import "../App.css"
+import { H1 } from './styles/Text.style';
+
 
 const LoginSignUpModal = (props) => {
 
@@ -22,7 +24,7 @@ const LoginSignUpModal = (props) => {
             {/* Modal Content div (purely css, deals with the size of the modal, as well as various other styling of the modal itself, including the animations for when it pops up - might be able to replace this using styled components going forward?)*/}
             <div>
                 {/* Modal header, controls more styling elements of the modal - also could be able to replace using styled components? */}
-                <h3>{props.title}</h3>
+                <H1>{props.title}</H1>
             </div>
             <div>
                 {/* Modal body - more styling, that could be used using styled components? */}
