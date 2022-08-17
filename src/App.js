@@ -1,3 +1,4 @@
+import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home.js"
 import Account from "./components/Account.js"
@@ -5,11 +6,11 @@ import Marketplace from "./components/Marketplace.js"
 import LoginSignUpModal from "./components/Modals/LoginSignUpModal.js"
 import { useState } from 'react';
 import { Header1 } from './styles/Header.style'
-import { Titles } from './styles/Title.style'
 import './App.css';
 import { Navlinks, Li1 } from './styles/Navlinks.style.js';
 import { Button } from './styles/Button.style';
 import { H1 } from './styles/Text.style';
+
 
 
 function App(props) {
@@ -18,16 +19,28 @@ function App(props) {
   // const [login, setLogin] = useState([])
   const [loggedIn, setLoggedIn] = useState(false)
 
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        font-family: 'Monofett', cursive;
+        font-family: 'Inconsolata', monospace;
+    }
+`;
+
+function App() {
+
   return (
     // <body>
     <div className="App">
-      <Titles>Clothe Nation</Titles>
-      
+
+      <GlobalStyle />
+      <body>
+
       <BrowserRouter>
       <nav className="navBar">
         <Header1>
           <div>
-            <H1>Clothe Nation</H1>
+            <H1>ClotheNation</H1>
           </div>
           <Navlinks>
             <Li1><Link to="/">Home</Link></Li1>

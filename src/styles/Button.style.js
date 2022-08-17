@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-    font-family: cursive;
-    font-weight: 500;
-    font-size: 30px;
+    font-family: 'Monofett', cursive;
+    font-size: 26px;
+    padding: 10px;
     color: black;
-    border-radius: 3pc;
+    border-radius: 10%;
     background-color: red;
     text-decoration: none;
-    cursor: pointer
+    cursor: pointer;
+    an
 `;
