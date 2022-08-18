@@ -1,9 +1,12 @@
 import Card from './Card';
+import BasketModal from "./Modals/BasketModal.js";
 import React,{useState,useEffect} from 'react';
 
 
 const Marketplace = () => {
 
+    const [showBasket, setShowBasket] = useState(false)
+    const [basket, setBasket] = useState(false)
     const [fake, setFake] = useState([]);
     console.log(fake);
     useEffect(() => {
@@ -22,7 +25,7 @@ const Marketplace = () => {
 
     return (
         <div>
-            <h1>Temp message for Marketplace</h1>
+            <a href='#' onClick={() => setShowBasket(true)}>Basket</a>
             {fake.map((values) => {
                 return (
                     <div className="market">
@@ -32,6 +35,8 @@ const Marketplace = () => {
                     </div>
                 )
             })}
+
+            {/* <BasketModal title = "Basket" onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/> */}
         </div>
     )
 }

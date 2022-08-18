@@ -29,10 +29,12 @@
   pointer-events: none;
 }
 
-.modal.show {
+.modal.show, .modal.showLogout, .modal.showBasket {
   opacity: 1;
   pointer-events: visible;
 }
+
+
 
 .modal-content {
   width: 500px;

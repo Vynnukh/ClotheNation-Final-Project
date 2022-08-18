@@ -1,12 +1,14 @@
 
 
 
-const Account = () => {
+const Account = ({loggedIn}) => {
 
 
 
 
   return (
+    <div>
+      {loggedIn ? 
     <div className="accBlock">
         <div className="accText">
           <h1>Account Page</h1>
@@ -28,6 +30,9 @@ const Account = () => {
             <button className="accBtn">Update Password</button>
           </div>
         </div>
+    </div>
+    : <div>
+        <h3>You must be logged in to access your account</h3></div>}
     </div>
   )  
 }
