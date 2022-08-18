@@ -28,10 +28,8 @@ const Marketplace = () => {
             <a href='#' onClick={() => setShowBasket(true)}>Basket</a>
             {fake.map((values) => {
                 return (
-                    <div className="market">
-                        <div className='cards'>
-                            <Card values={values}/>
-                        </div>
+                    <div className='cards'>
+                        <Card values={values}/>
                     </div>
                 )
             })}
