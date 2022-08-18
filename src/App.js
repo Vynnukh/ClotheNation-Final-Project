@@ -12,7 +12,6 @@ import { Button } from './styles/Button.style';
 import { H1 } from './styles/Text.style';
 
 
-
 function App(props) {
 
   const [show, setShow] = useState(false)
@@ -20,14 +19,12 @@ function App(props) {
   const [loggedIn, setLoggedIn] = useState(false)
 
 
-const GlobalStyle = createGlobalStyle`
-    body {
-        font-family: 'Monofett', cursive;
-        font-family: 'Inconsolata', monospace;
-    }
-`;
-
-
+  const GlobalStyle = createGlobalStyle`
+      body {
+          font-family: 'Monofett', cursive;
+          font-family: 'Inconsolata', monospace;
+      }
+  `;
 
   return (
   
