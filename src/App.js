@@ -50,10 +50,13 @@ function App() {
             <Li1><Link to="/Members">Members</Link></Li1>
             <Li1><Link to="/Marketplace">Marketplace</Link></Li1>
           </Navlinks>
-          <a href="#" onClick={() => setShow(true)}><Button>LogIn</Button></a>
-          
+          <div>
+            {loggedIn ?
           <a href="#" onClick={() => setShowLogout(true)}><Button>Log out</Button></a>
-
+          :
+          <a href="#" onClick={() => setShow(true)}><Button>LogIn</Button></a>
+          }
+          </div>
         </Header1>
         
         <LogoutModal title = "Logout" onClose = {() => setShowLogout(false)} showLogout = {showLogout} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
@@ -64,7 +67,7 @@ function App() {
         <Route path='/' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
         <Route path='/Account' element = {<Account loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
         <Route path="/Members" element = {<Members loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
-        <Route path='/Marketplace' element = {<Marketplace loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
+        <Route path='/Marketplace' element = {<Marketplace loggedIn = {loggedIn}/>}></Route>
       </Routes>
       </BrowserRouter>
    

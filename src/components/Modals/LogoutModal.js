@@ -22,25 +22,28 @@ const LogoutModal = (props, setUser, setLoggedIn) => {
     }, [])
 
     return (
-        <div className={`modal ${props.show ? "show" : ""}`} onClick={props.onClose}>
+        <div className={`modal ${props.showLogout ? "showLogout" : ""}`} onClick={props.onClose}>
             <div className="modal-content" onClick={k => k.stopPropagation()}>
-                <div>
-                    {/* header Class */}
+                <div className="modal-header">
+                    
                     <h3>{props.title}</h3>
                 </div>
-                <div>
-                    {/* Modal-Body Class */}
+                <div className="modal-body">
+                    
                     <div>
                         <Logout setUser={setUser} setLoggedIn={setLoggedIn} />
+                        
+
                     </div>
 
                 </div>
-                <div>
-                    {/* Footer Class */}
+                <div className="modal-footer">
+                    
+                    <button onClick={props.onClose}>Close</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default LogoutModal
+export default LogoutModal;
