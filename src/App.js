@@ -15,21 +15,21 @@ import { H1 } from './styles/Text.style';
 
 
 
+
 function App() {
+
 
   const [show, setShow] = useState(false)
   const [showLogout, setShowLogout] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
 
 
-const GlobalStyle = createGlobalStyle`
-    body {
-        font-family: 'Monofett', cursive;
-        font-family: 'Inconsolata', monospace;
-    }
-`;
-
-
+  const GlobalStyle = createGlobalStyle`
+      body {
+          font-family: 'Monofett', cursive;
+          font-family: 'Inconsolata', monospace;
+      }
+  `;
 
   return (
   
