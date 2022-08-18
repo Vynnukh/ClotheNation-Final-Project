@@ -87,9 +87,45 @@
 
 
 
+/* MARKET CSS */
+
+.cards {
+  /* position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  justify-content: center;
+  background-color: rgb(194, 116, 14);
+  margin: 20px;
+  padding: 30px;
+  max-width: 75%;
+}
+
+img {
+  max-width: 100px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: row;
+  font-family: 'Inconsolata', monospace;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border: solid 1px black;
+}
 
 
-.market {
+
+/* .market {
   background-color: antiquewhite;
   max-width: 1300px;
   margin: 0 auto;
@@ -103,6 +139,10 @@
   width: 28%;
   margin: 10px;
   padding: 20px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .card-container {
@@ -145,7 +185,7 @@ p {
 .card-container, img {
   width: 300px;
   object-fit: contain;
-}
+} */
 
 
 

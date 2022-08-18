@@ -25,10 +25,8 @@ const Marketplace = () => {
             <h1>Temp message for Marketplace</h1>
             {fake.map((values) => {
                 return (
-                    <div className="market">
-                        <div className='cards'>
-                            <Card values={values}/>
-                        </div>
+                    <div className='cards'>
+                        <Card values={values}/>
                     </div>
                 )
             })}
