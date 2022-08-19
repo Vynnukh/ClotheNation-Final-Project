@@ -34,16 +34,6 @@ import photo from './logo/photo.jpg';
 
 function App() {
 
-
-
-const GlobalStyle = createGlobalStyle`
-    body {
-      
-    }
-`;
-
-return (
-
   const [show, setShow] = useState(false)
   const [showLogout, setShowLogout] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
