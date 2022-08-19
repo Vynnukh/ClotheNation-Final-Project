@@ -9,7 +9,13 @@ const Card = ({values, basket, setBasket, image, title, description}) => {
             title: title,
             description: description
         })
-    })
+    }, [])
+
+    const handleClick = () => {
+        let shoppingCart = [...basket]
+        shoppingCart.push(card)
+        setBasket(shoppingCart)
+    }
 
     return (
             <div className='card-container'>
@@ -25,7 +31,7 @@ const Card = ({values, basket, setBasket, image, title, description}) => {
                         <p>
                             £{values.price}
                         </p>
-                        <button className='addButton'>Add to basket</button>
+                        <button className='addButton' onClick={() => handleClick()}>Add to basket</button>
                     </div>
                 </div>
             </div>
