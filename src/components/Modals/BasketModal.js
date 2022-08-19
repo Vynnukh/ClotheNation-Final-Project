@@ -23,13 +23,14 @@ const BasketModal = (props, values) => {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map((card, index) => {
+                    {props.basket.map((fake, index) => {
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                values={props.values}/>
+                                values={fake.values}
+                                index={index}/>
                             </div>
                         )
 
@@ -53,7 +54,7 @@ const BasketModalItem = ({basket, setBasket, values, index}) => {
     return (
         <div>
             <div>
-            <p>values</p>
+            <p>{values}</p>
             </div>
             <button onClick={() => handleClick(index)}>Remove Item</button>
         </div>

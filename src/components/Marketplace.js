@@ -8,10 +8,17 @@ const Marketplace = () => {
     const [showBasket, setShowBasket] = useState(false)
     const [basket, setBasket] = useState(false)
     const [fake, setFake] = useState([]);
+    // const [card, setCard] = useState([])
     console.log(fake);
     useEffect(() => {
         fakeStore();
     },[])
+
+    const handleClick = () => {
+        let shoppingCart = [...basket]
+        shoppingCart.push(fake)
+        setBasket(shoppingCart)
+    }
 
     const fakeStore = async () => {
         const response = await fetch("https://fakestoreapi.com/products");
@@ -25,7 +32,7 @@ const Marketplace = () => {
 
     return (
         <div>
-            <a href='#' onClick={() => setShowBasket(true)}>Basket</a>
+            <a href='#' onClick={() => handleClick()}>Basket</a>
             {fake.map((values) => {
                 return (
                     <div className='cards'>
