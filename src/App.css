@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color:rgb(181, 150, 103) rgb(198, 221, 221);
+  
 }
 
 .navBar {
@@ -189,25 +189,167 @@ p {
   object-fit: contain;
 } */
 
+.App-logoc1 {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
+.App-logol {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
+.App-logoo {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
+.App-logot {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
+.App-logoh {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
+.App-logoe {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
+.App-logomod {
+  height: 12vmin;
+  margin-top: -21px;
+  pointer-events: none;
+}
 
+.App-logon {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
+.App-logoa {
+  height: 3.5vmin;
+  pointer-events: none;
+}
 
-/* .App-logo {
-  height: 40vmin;
+.App-logot2 {
+  height: 3.5vmin;
+  pointer-events: none;
+}
+
+.App-logoi {
+  height: 3.5vmin;
+  pointer-events: none;
+}
+
+.App-logoo2 {
+  height: 3.5vmin;
+  pointer-events: none;
+}
+
+.App-logon2 {
+  height: 3.5vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-logoc1 {
+    animation: App-logo-spin infinite 10s linear;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logol {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logoo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logot {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logoh {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logoe {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logon {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logoa {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logot2 {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logoi {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logoo2 {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logon2 {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+.App-header {
+  background-color: #c80c0c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  color: white;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -224,11 +366,20 @@ p {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes App-logo-spin{
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
+
+a {
+  color:rgb(119, 119, 154);
+}
+
+a:hover {
+  color:aqua;
+}
+

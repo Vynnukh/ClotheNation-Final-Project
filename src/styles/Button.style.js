@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-    font-family: 'Monofett', cursive;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 26px;
-    padding: 10px;
+    padding: 1px;
     color: black;
-    border-radius: 10%;
-    background-color: red;
+    border-radius: 20%;
+    background-color: #ffff;
     text-decoration: none;
     cursor: pointer;
-    an
+    
 `;
+
+
