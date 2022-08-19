@@ -14,11 +14,7 @@ const Marketplace = () => {
         fakeStore();
     },[])
 
-    const handleClick = () => {
-        let shoppingCart = [...basket]
-        shoppingCart.push(fake)
-        setBasket(shoppingCart)
-    }
+    
 
     const fakeStore = async () => {
         const response = await fetch("https://fakestoreapi.com/products");
@@ -32,7 +28,7 @@ const Marketplace = () => {
 
     return (
         <div>
-            <a href='#' onClick={() => handleClick()}>Basket</a>
+            <a href='#' onClick={() => setShowBasket(true)}>Basket</a>
             {fake.map((values) => {
                 return (
                     <div className='cards'>
