@@ -3,10 +3,10 @@ import SignUp from "../CRUDoperations/SignUp.js"
 import {Login} from "../CRUDoperations/Login.js"
 import "../../App.css"
 
-const LoginSignUpModal = (props) => {
+const LoginSignUpModal = (props, setUser, setLoggedIn) => {
 
-    const [user, setUser] = useState()
-    const [loggedIn, setLoggedIn] = useState()
+    // const [user, setUser] = useState()
+    // const [loggedIn, setLoggedIn] = useState()
 
     const escapeKeyClose = (x) => {
         try {
@@ -25,15 +25,16 @@ const LoginSignUpModal = (props) => {
     }, [])
 
     return(
-        <div className={`login ${props.show ? "show" : ""}`} onClick = {props.onClose}>
-            <div className="login-content" onClick={x => x.stopPropagation()}>
-            {/* Modal Content div (purely css, deals with the size of the modal, as well as various other styling of the modal itself, including the animations for when it pops up - might be able to replace this using styled components going forward?)*/}
-            <div>
-                {/* Modal header, controls more styling elements of the modal - also could be able to replace using styled components? */}
+        <div className={`modal ${props.show ? "show" : ""}`}>
+            <div className="modal-content" onClick={x => x.stopPropagation()}>
+            <div className="modal-header">
                 <h3>{props.title}</h3>
+                <br></br>
+                <button onClick={props.onClose}>Close</button>
+                <br></br>
             </div>
-            <div>
-                {/* Modal body - more styling, that could be used using styled components? */}
+            <div className="modal-body">
+                
                  
                     <div>
                         <p>Sign up or login to access your account</p>
@@ -47,8 +48,9 @@ const LoginSignUpModal = (props) => {
                     </div>
                 
             </div>
-            <div>
-                {/* Modal footer, more styling of the modal that can be used with the styled components */}
+            <div className="modal-footer">
+               
+                
             </div>
             </div>
         </div>

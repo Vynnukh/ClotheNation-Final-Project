@@ -1,24 +1,25 @@
 
 
-const Card = () => {
+const Card = ({values}) => {
 
     return (
-        <div className='card-container'>
-            <div className='card-item card-image'>
-                <img></img>
+            <div className='card-container'>
+                <div className='card-image'>
+                    <img src={values.image}></img>
+                </div>
+                <div className="card-text">
+                    <h3>{values.title}</h3>
+                    <div>
+                        <p>
+                            {values.description}
+                        </p>
+                        <p>
+                            £{values.price}
+                        </p>
+                        <button className='addButton'>Add to basket</button>
+                    </div>
+                </div>
             </div>
-            <h2 className='card-item card-title' >Item: </h2>
-            <div className='card-item card-text'>
-                <p>
-                    Description:
-                </p>
-                <p>
-                    Price: £
-                </p>
-                <button className='addButton'>Add to basket</button>
-
-            </div>
-        </div>
     )
 }
 

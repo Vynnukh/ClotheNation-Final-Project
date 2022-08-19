@@ -5,6 +5,8 @@ import Home from "./components/Home.js"
 import Account from "./components/Account.js"
 import Marketplace from "./components/Marketplace.js"
 import LoginSignUpModal from "./components/Modals/LoginSignUpModal.js"
+import Members from "./components/Members.js"
+import LogoutModal from "./components/Modals/LogoutModal.js";
 import { useState } from 'react';
 import { Header1 } from './styles/Header.style'
 import './App.css';
@@ -29,11 +31,9 @@ import photo2 from './logo/photo2.jpg';
 import photo from './logo/photo.jpg';
 
 
-function App(props) {
 
-  const [show, setShow] = useState(false)
-  // const [login, setLogin] = useState([])
-  const [loggedIn, setLoggedIn] = useState(false)
+function App() {
+
 
 
 const GlobalStyle = createGlobalStyle`
@@ -43,6 +43,21 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 return (
+
+  const [show, setShow] = useState(false)
+  const [showLogout, setShowLogout] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false)
+
+
+  const GlobalStyle = createGlobalStyle`
+      body {
+          font-family: 'Monofett', cursive;
+          font-family: 'Inconsolata', monospace;
+      }
+  `;
+
+  return (
+
   
     <div className="App">
 
@@ -68,22 +83,31 @@ return (
         <img src={n2} className="App-logon2" alt="logo" />
           </Divlogo>
           <Navlinks>
+
             <Li1><Link to="/"><a>Home</a></Link></Li1>
             <Li1><Link to="/Account"><a>Account</a></Link></Li1>
+            <Li1><Link to="/Members"><a>Members</a></Link></Li1>
             <Li1><Link to="/Marketplace"><a>Marketplace</a></Link></Li1>
-            
           </Navlinks>
-          <a href="#" id='open-button' onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
+          <div>
+            {loggedIn ?
+          <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
+          :
+          <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
+          }
+          </div>
         </Header1>
         
-        
+        <LogoutModal title = "Logout" onClose = {() => setShowLogout(false)} showLogout = {showLogout} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
+
 
         <LoginSignUpModal title = "Login/SignUp" onClose = {() => setShow(false)} show = {show} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
       </NavBar1>
       <Routes>
         <Route path='/' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
-        <Route path='/Account' element = {<Account/>}></Route>
-        <Route path='/Marketplace' element = {<Marketplace/>}></Route>
+        <Route path='/Account' element = {<Account loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
+        <Route path="/Members" element = {<Members loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
+        <Route path='/Marketplace' element = {<Marketplace loggedIn = {loggedIn}/>}></Route>
       </Routes>
       </BrowserRouter>
       <Divpic>
