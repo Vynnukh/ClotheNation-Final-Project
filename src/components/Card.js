@@ -1,6 +1,15 @@
+import {useEffect, useState} from "react"
 
+const Card = ({values, basket, setBasket, image, title, description}) => {
 
-const Card = ({values}) => {
+    const [card, setCard] = useState([])
+    useEffect(() => {
+        setCard({
+            image: image,
+            title: title,
+            description: description
+        })
+    })
 
     return (
             <div className='card-container'>
