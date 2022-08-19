@@ -22,24 +22,26 @@ const LogoutModal = (props, setUser, setLoggedIn) => {
     }, [])
 
     return (
-        <div className={`modal ${props.showLogout ? "showLogout" : ""}`} onClick={props.onClose}>
-            <div className="modal-content" onClick={k => k.stopPropagation()}>
-                <div className="modal-header">
-                    
-                    <h3>{props.title}</h3>
-                </div>
-                <div className="modal-body">
-                    
-                    <div>
-                        <Logout setUser={setUser} setLoggedIn={setLoggedIn} />
+        <div className="modalStyle">
+            <div className={`modal ${props.showLogout ? "showLogout" : ""}`} onClick={props.onClose}>
+                <div className="modal-content" onClick={k => k.stopPropagation()}>
+                    <div className="modal-header">
                         
+                        <h3>{props.title}</h3>
+                    </div>
+                    <div className="modal-body">
+                        
+                        <div>
+                            <Logout setUser={setUser} setLoggedIn={setLoggedIn} />
+                            
+
+                        </div>
 
                     </div>
-
-                </div>
-                <div className="modal-footer">
-                    
-                    <button onClick={props.onClose}>Close</button>
+                    <div className="modal-footer">
+                        
+                        <button onClick={props.onClose}>Close</button>
+                    </div>
                 </div>
             </div>
         </div>
