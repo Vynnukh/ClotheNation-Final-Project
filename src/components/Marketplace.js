@@ -20,7 +20,7 @@ const Marketplace = () => {
         const response = await fetch("https://fakestoreapi.com/products");
         // console.log(response)
         const jsonData = await response.json();
-        // console.log(jsonData);
+        console.log(jsonData);
         setFake(jsonData)
     }
     // fakeStore();

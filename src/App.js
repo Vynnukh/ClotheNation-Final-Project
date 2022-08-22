@@ -7,7 +7,7 @@ import Marketplace from "./components/Marketplace.js"
 import LoginSignUpModal from "./components/Modals/LoginSignUpModal.js"
 import Members from "./components/Members.js"
 import LogoutModal from "./components/Modals/LogoutModal.js";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Header1 } from './styles/Header.style'
 import './App.css';
 import { Navlinks, Li1, NavBar1, LinkStyle } from './styles/Navlinks.style.js';
@@ -38,6 +38,13 @@ function App() {
   const [showLogout, setShowLogout] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
 
+  useEffect(() => {
+    (async() => {
+      const res = await fetch(`${process.env.REACT_APP_BASE_URL}health`)
+      const data = await res.json()
+      console.log(data)
+    })()
+  }, [])
 
   const GlobalStyle = createGlobalStyle`
       body {
