@@ -1,6 +1,7 @@
 export const signUp = async (username, password, email, setUser, setLoggedIn) => {
     try {
-        const response = await fetch("https://clothenation.herokuapp.com/user",{
+        // const response = await fetch("https://clothenation.herokuapp.com/user",{
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -19,7 +20,7 @@ export const signUp = async (username, password, email, setUser, setLoggedIn) =>
 }
 export const login = async (username, password, setUser, setLoggedIn) => {
     try {
-        const response = await fetch("https://clothenation.herokuapp.com/login", {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}login`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -37,7 +38,7 @@ export const login = async (username, password, setUser, setLoggedIn) => {
 }
 export const getAllUsers = async (setList) => {
     try {
-        const response = await fetch("https://clothenation.herokuapp.com/user", {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`, {
             // headers: {"Content-Type": "application/json"},
             method: "GET",
         });
@@ -51,7 +52,7 @@ export const getAllUsers = async (setList) => {
 export const updateU = async (username, password, newUsername, newEmail, newPassword, setter) => {
     try {
     console.log("updateU function called")
-        const response = await fetch("https://clothenation.herokuapp.com/user", {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`, {
             headers: {"Content-Type": "application/json"},
             method: "PATCH",
             body: JSON.stringify({
@@ -73,7 +74,7 @@ export const updateU = async (username, password, newUsername, newEmail, newPass
 }
 export const deleteU = async (username, password, setter) => {
     try {
-        const response = await fetch("https://clothenation.herokuapp.com/user", {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`, {
             headers: {"Content-Type": "application/json"},
             method: "DELETE",
             body: JSON.stringify({
