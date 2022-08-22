@@ -1,7 +1,7 @@
 export const signUp = async (username, password, email, setUser, setLoggedIn) => {
     try {
         // const response = await fetch("https://clothenation.herokuapp.com/user",{
-        const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`,{
+        const response = await fetch(`http://LOCALHOST:5001/user`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -10,17 +10,19 @@ export const signUp = async (username, password, email, setUser, setLoggedIn) =>
                 "email": email
             })
         })
-        const data = await response.json()
-        setUser()
+        const data = await response.json();
+        console.log(data);
+        setUser(data.msg.username);
         setLoggedIn(true)
     } 
-    catch(error) {
+    catch(error) 
+    {
         console.log(error)
     }
 }
 export const login = async (username, password, setUser, setLoggedIn) => {
     try {
-        const response = await fetch(`${process.env.REACT_APP_BASE_URL}login`, {
+        const response = await fetch(`http://LOCALHOST:5001/login`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -29,10 +31,12 @@ export const login = async (username, password, setUser, setLoggedIn) => {
             })
         })
         const data = await response.json()
-        setUser()
+        console.log(data.user)
+        setUser(data.user)
         setLoggedIn(true)
     } 
-    catch(error) {
+    catch(error) 
+    {
         console.log(error)
     }
 }

@@ -6,10 +6,10 @@ export const Login = ({setUser, setLoggedIn}) => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
 
-const loginHandler = async (event) => {
-    event.preventDefault()
-    await login(username, password, setUser, setLoggedIn)
-}
+    const loginHandler = async (event) => {
+        event.preventDefault()
+        await login(username, password, setUser, setLoggedIn)
+    }
 
     return (
         <form onSubmit={loginHandler}>

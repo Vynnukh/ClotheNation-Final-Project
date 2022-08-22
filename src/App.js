@@ -37,6 +37,8 @@ function App() {
   const [show, setShow] = useState(false)
   const [showLogout, setShowLogout] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
+  const [user, setUser] = useState()
+  //console.log("LoggedIn & SetLoggedIn in app.js: ", loggedIn, setLoggedIn)
 
   useEffect(() => {
     (async() => {
@@ -98,7 +100,7 @@ function App() {
         <LogoutModal title = "Logout" onClose = {() => setShowLogout(false)} showLogout = {showLogout} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
 
 
-        <LoginSignUpModal title = "Login/SignUp" onClose = {() => setShow(false)} show = {show} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
+        <LoginSignUpModal loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} title="Login/SignUp" onClose={() => setShow(false)} show={show}/>
       </NavBar1>
       <Routes>
         <Route path='/' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
