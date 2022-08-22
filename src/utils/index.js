@@ -5,9 +5,9 @@ export const signUp = async (username, password, email, setUser, setLoggedIn) =>
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                "Username": username,
-                "Password": password,
-                "Email": email
+                "username": username,
+                "password": password,
+                "email": email
             })
         })
         const data = await response.json()
@@ -24,8 +24,8 @@ export const login = async (username, password, setUser, setLoggedIn) => {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                "Username": username,
-                "Password": password
+                "username": username,
+                "password": password
             })
         })
         const data = await response.json()
