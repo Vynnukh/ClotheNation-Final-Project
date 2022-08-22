@@ -2,18 +2,18 @@ import {useEffect, useState} from "react"
 
 const Card = ({values, basket, setBasket, image, title, description}) => {
 
-    const [card, setCard] = useState([])
-    useEffect(() => {
-        setCard({
-            image: image,
-            title: title,
-            description: description
-        })
-    }, [])
+    // const [value, setValue] = useState([])
+    // useEffect(() => {
+    //     setValue({
+    //         image: image,
+    //         title: title,
+    //         description: description
+    //     })
+    // }, [])
 
     const handleClick = () => {
         let shoppingCart = [...basket]
-        shoppingCart.push(card)
+        shoppingCart.push(values)
         setBasket(shoppingCart)
     }
 
