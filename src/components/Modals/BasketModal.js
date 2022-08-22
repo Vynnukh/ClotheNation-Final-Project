@@ -14,7 +14,7 @@ const BasketModal = (props) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, [])
+    }, )
 
     return(
         <div className={`modal ${props.showBasket ? "showBasket" : ""}`} onClick={props.onClose}>
@@ -32,11 +32,13 @@ const BasketModal = (props) => {
                                 image={card.image}
                                 title={card.title}
                                 description={card.description}
-                                index={index}/>
+                                index={index}
+                                />
                             </div>
                         )
-
-                    })}
+                    }
+                )
+            }
                 </div>
                 <div className="modal-footer">
                     <button onClick={props.onClose}>Close</button>
