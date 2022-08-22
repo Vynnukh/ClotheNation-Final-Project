@@ -2,8 +2,8 @@ import { useEffect} from "react"
 import SignUp from "../CRUDoperations/SignUp.js"
 import {Login} from "../CRUDoperations/Login.js"
 import "../../App.css"
-
-const LoginSignUpModal = (props, setUser, setLoggedIn) => {
+// loggedIn, setUser, setLoggedIn
+const LoginSignUpModal = (props) => {
 
     // const [user, setUser] = useState()
     // const [loggedIn, setLoggedIn] = useState()
@@ -41,11 +41,10 @@ const LoginSignUpModal = (props, setUser, setLoggedIn) => {
                             <p>Sign up or login to access your account</p>
                                 <h3>Sign up here:</h3>
                                 <br></br>
-                                <SignUp setUser = {setUser} setLoggedIn = {setLoggedIn}/>
+                                <SignUp setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
                                 <br></br>
                                 <h3>Or</h3>
-                                <Login setUser = {setUser} setLoggedIn = {setLoggedIn}/>
-                        
+                                <Login setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
                         </div>
                     
                 </div>
