@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react"
+import { useEffect} from "react"
 import SignUp from "../CRUDoperations/SignUp.js"
 import {Login} from "../CRUDoperations/Login.js"
 import "../../App.css"
@@ -22,7 +22,7 @@ const LoginSignUpModal = (props, setUser, setLoggedIn) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, [])
+    }, )
 
     return(
         <div className="modalStyle">
