@@ -1,7 +1,7 @@
 export const signUp = async (username, password, email, setUser, setLoggedIn) => {
     try {
         // const response = await fetch("https://clothenation.herokuapp.com/user",{
-        const response = await fetch(`http://LOCALHOST:5001/user`,{
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -22,7 +22,7 @@ export const signUp = async (username, password, email, setUser, setLoggedIn) =>
 }
 export const login = async (username, password, setUser, setLoggedIn) => {
     try {
-        const response = await fetch(`http://LOCALHOST:5001/login`, {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}login`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -33,6 +33,7 @@ export const login = async (username, password, setUser, setLoggedIn) => {
         const data = await response.json()
         console.log(data.user)
         setUser(data.user)
+        console.log(user)
         setLoggedIn(true)
     } 
     catch(error) 
