@@ -33,7 +33,6 @@ export const login = async (username, password, setUser, setLoggedIn) => {
         const data = await response.json()
         console.log(data.user)
         setUser(data.user)
-        console.log(user)
         setLoggedIn(true)
     } 
     catch(error) 
