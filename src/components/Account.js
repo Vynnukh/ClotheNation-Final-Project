@@ -1,13 +1,13 @@
-
-
-
+import UpdateUser from "./CRUDoperations/Update.js";
+// import UpdateUser from "./Modals/Update.js";
 const Account = ({loggedIn}) => {
-
-
-
 
   return (
     <div>
+      {/* <UpdateUser></UpdateUser> */}
+        {/* <updateUser/> */}
+        {/* <UpdateUser></UpdateUser> */}
+        <UpdateUser/>
       {loggedIn ? 
     <div className="accBlock">
         <div className="accText">
