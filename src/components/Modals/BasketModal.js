@@ -2,7 +2,7 @@ import {useEffect} from "react"
 import "../../App.css"
 
 const BasketModal = (props) => {
-console.log("props:", props)
+// console.log("props:", props)
     const escapeKeyClose = (v) => {
         if((v.charCode || v.keyCode) === 27) {
             props.onClose()
@@ -23,14 +23,14 @@ console.log("props:", props)
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map((values, index) => {
+                    {props.basket.map((card, index) => {
                         
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                values={values.values}
+                                values={card.values}
                                 index={index}
                                 />
                             </div>
