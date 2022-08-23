@@ -4,16 +4,19 @@ const Card = ({values, basket, setBasket}) => {
 
     const [card, setCard] = useState({})
     useEffect(() => {
+        console.log("basket in useEffect: ", basket)
         setCard({
             values: values
         })
     }, [])
-// console.log("card log",card)
     const handleClick = () => {
-        let shoppingCart = [...basket]
-        shoppingCart.push(card)
-        setBasket(shoppingCart)
-        
+        console.log("handleClick in card.js fired", values)
+        console.log("Basket in card.js: ",basket)
+        let shoppingCart = [values] 
+        console.log("Shopping cart:", shoppingCart)
+        // shoppingCart.push(values)
+        setBasket((prev) => [...prev, ...shoppingCart] )
+        console.log("Basket in card.js: ",basket)
     }
 // console.log("Values: ", values)
     return (
@@ -30,7 +33,7 @@ const Card = ({values, basket, setBasket}) => {
                         <p>
                             £{values.price}
                         </p>
-                        <button className='addButton' onClick={() => handleClick()}>Add to basket</button>
+                        <button className='addButton' onClick={handleClick}>Add to basket</button>
                     </div>
                 </div>
             </div>

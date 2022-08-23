@@ -32,7 +32,7 @@ const Marketplace = () => {
             {fake.map((values) => {
                 return (
                     <div className='cards'>
-                        <Card values={values}/>
+                        <Card values={values} basket={basket} setBasket={setBasket}/>
                     </div>
                 )
             })}
