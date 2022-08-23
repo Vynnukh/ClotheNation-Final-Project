@@ -10,13 +10,9 @@ const Card = ({values, basket, setBasket}) => {
         })
     }, [])
     const handleClick = () => {
-        console.log("handleClick in card.js fired", values)
-        console.log("Basket in card.js: ",basket)
-        let shoppingCart = [values] 
-        console.log("Shopping cart:", shoppingCart)
+        let shoppingCart = [values]
         // shoppingCart.push(values)
         setBasket((prev) => [...prev, ...shoppingCart] )
-        console.log("Basket in card.js: ",basket)
     }
 // console.log("Values: ", values)
     return (
