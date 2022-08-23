@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
-export const Navlinks = styled.ul`
-            display:flex;
-            flex-direction:row;
+
+export const Navlinks = styled.ul` 
+display: flex;
+justify-content: space-around;
             font-size:30px;
-            font-family: cursive;
+            font-family: 'Inconsolata', monospace;
             
         
 `;
 
 export const NavBar1 = styled.nav`
-            background-color:rgb(174, 174, 174) ;
-            margin-inline: -40px
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 1px 8px #ddd;
 `;
 
 export const Li1 = styled.li`
@@ -21,4 +24,3 @@ export const Li1 = styled.li`
             margin-inline: 70px;
             
 `;
-
