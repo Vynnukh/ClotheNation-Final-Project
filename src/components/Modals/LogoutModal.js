@@ -19,7 +19,7 @@ const LogoutModal = (props, setUser, setLoggedIn) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, )
+    }, [])
 
     return (
         <div className="modalStyle">

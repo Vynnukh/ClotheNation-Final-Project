@@ -10,7 +10,7 @@ import LogoutModal from "./components/Modals/LogoutModal.js";
 import { useState, useEffect } from 'react';
 import { Header1 } from './styles/Header.style'
 import './App.css';
-import { Navlinks, Li1, NavBar1, LinkStyle } from './styles/Navlinks.style.js';
+import { Navlinks, Li1, NavBar1 } from './styles/Navlinks.style.js';
 import { Button } from './styles/Button.style';
 import { H1, P1 } from './styles/Text.style';
 import { Divhome, Divlogo, Divpic } from './styles/Divhome.style';
@@ -64,23 +64,30 @@ function App() {
       
 
       <BrowserRouter>
-      <NavBar1>
-        <Header1>
-          <Divlogo>
+      <Divlogo>
           <img src={c1} className="App-logoc1" alt="logo" />
           <img src={l} className="App-logol" alt="logo" />
           <img src={o} className="App-logoo" alt="logo" />
-        <img src={t} className="App-logot" alt="logo" />
-        <img src={h} className="App-logoh" alt="logo" />
-        <img src={e} className="App-logoe" alt="logo" />
-        <img src={mod} className="App-logomod" alt="logo" />
-        <img src={n} className="App-logon" alt="logo" />
-        <img src={a} className="App-logoa" alt="logo" />
-        <img src={t2} className="App-logot2" alt="logo" />
-        <img src={i} className="App-logoi" alt="logo" />
-        <img src={o2} className="App-logoo2" alt="logo" />
-        <img src={n2} className="App-logon2" alt="logo" />
+          <img src={t} className="App-logot" alt="logo" />
+          <img src={h} className="App-logoh" alt="logo" />
+          <img src={e} className="App-logoe" alt="logo" />
+          <img src={mod} className="App-logomod" alt="logo" />
+          <img src={n} className="App-logon" alt="logo" />
+          <img src={a} className="App-logoa" alt="logo" />
+          <img src={t2} className="App-logot2" alt="logo" />
+          <img src={i} className="App-logoi" alt="logo" />
+          <img src={o2} className="App-logoo2" alt="logo" />
+          <img src={n2} className="App-logon2" alt="logo" />
           </Divlogo>
+          <div className="log">
+            {loggedIn ?
+          <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
+          :
+          <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
+          }
+          </div>
+      <NavBar1>
+        <Header1>
           <Navlinks>
 
             <Li1><Link to="/"><a>Home</a></Link></Li1>
@@ -88,13 +95,6 @@ function App() {
             <Li1><Link to="/Members"><a>Members</a></Link></Li1>
             <Li1><Link to="/Marketplace"><a>Marketplace</a></Link></Li1>
           </Navlinks>
-          <div>
-            {loggedIn ?
-          <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
-          :
-          <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
-          }
-          </div>
         </Header1>
         
         <LogoutModal title = "Logout" onClose = {() => setShowLogout(false)} showLogout = {showLogout} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
@@ -109,10 +109,10 @@ function App() {
         <Route path='/Marketplace' element = {<Marketplace loggedIn = {loggedIn}/>}></Route>
       </Routes>
       </BrowserRouter>
-      <Divpic>
+      {/* <Divpic>
       <img src= {photo2} alt="girls2"/>
       <img src= {photo} alt="girls"/>
-    </Divpic>
+    </Divpic> */}
     </div>
     
   );

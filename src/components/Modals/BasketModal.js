@@ -2,7 +2,7 @@ import {useEffect} from "react"
 import "../../App.css"
 
 const BasketModal = (props) => {
-
+console.log("props:", props)
     const escapeKeyClose = (v) => {
         if((v.charCode || v.keyCode) === 27) {
             props.onClose()
@@ -14,7 +14,7 @@ const BasketModal = (props) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, )
+    }, [])
 
     return(
         <div className={`modal ${props.showBasket ? "showBasket" : ""}`} onClick={props.onClose}>
@@ -23,15 +23,14 @@ const BasketModal = (props) => {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map((card, index) => {
+                    {props.basket.map((values, index) => {
+                        
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                image={card.image}
-                                title={card.title}
-                                description={card.description}
+                                values={values.values}
                                 index={index}
                                 />
                             </div>
@@ -39,6 +38,7 @@ const BasketModal = (props) => {
                     }
                 )
             }
+           
                 </div>
                 <div className="modal-footer">
                     <button onClick={props.onClose}>Close</button>
@@ -48,18 +48,24 @@ const BasketModal = (props) => {
     )
 }
 
-const BasketModalItem = ({basket, setBasket, image, title, description, index}) => {
+const BasketModalItem = ({basket, setBasket, values, index}) => {
     const handleClick = (index) => {
         let newBasketList = [...basket]
         newBasketList.splice(index, 1)
         setBasket(newBasketList)
-    }
+    } 
+
+
 
     return (
         <div>
             <div>
-            <p>{title}</p>
-            <p>{description}</p>
+                <div>
+            <img src={values.image}></img>
+            </div>
+            <h3>{values.title}</h3>
+            <p>{values.description}</p>
+            £{values.price}
             </div>
             <button onClick={() => handleClick(index)}>Remove Item</button>
         </div>

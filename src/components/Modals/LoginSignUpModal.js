@@ -22,11 +22,11 @@ const LoginSignUpModal = (props) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, )
+    }, [])
 
     return(
         <div className="modalStyle">
-            <div className={`modal ${props.show ? "show" : ""}`}>
+            <div className={`modal ${props.show ? "show" : ""}`} onClick={props.onClose}>
                 <div className="modal-content" onClick={x => x.stopPropagation()}>
                 <div className="modal-header">
                     <h3>{props.title}</h3>
