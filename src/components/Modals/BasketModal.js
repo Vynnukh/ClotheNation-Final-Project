@@ -29,9 +29,7 @@ const BasketModal = (props) => {
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                image={props.values.image}
-                                title={props.values.title}
-                                description={props.values.description}
+                                values={props.values}
                                 index={props.index}
                                 />
                             </div>
@@ -49,7 +47,7 @@ const BasketModal = (props) => {
     )
 }
 
-const BasketModalItem = ({basket, setBasket, image, title, description, index}) => {
+const BasketModalItem = ({basket, setBasket, values, index}) => {
     const handleClick = (index) => {
         let newBasketList = [...basket]
         newBasketList.splice(index, 1)
@@ -59,9 +57,7 @@ const BasketModalItem = ({basket, setBasket, image, title, description, index}) 
     return (
         <div>
             <div>
-            <p>{title}</p>
-            <img src={image}></img>
-            <p>{description}</p>
+            {values}
             </div>
             <button onClick={() => handleClick(index)}>Remove Item</button>
         </div>
