@@ -1,3 +1,4 @@
+import DeleteUser from "./CRUDoperations/Delete.js";
 import UpdateUser from "./CRUDoperations/Update.js";
 // import UpdateUser from "./Modals/Update.js";
 
@@ -9,6 +10,7 @@ const Account = ({loggedIn}) => {
         {/* <updateUser/> */}
         {/* <UpdateUser></UpdateUser> */}
         <UpdateUser/>
+        <DeleteUser/>
       {loggedIn ? 
     <div className="accBlock">
         <div className="accText">
