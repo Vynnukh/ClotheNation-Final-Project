@@ -33,7 +33,7 @@ const SignUp = ({setUser, setLoggedIn}) => {
     //     </form>
     // )
             <form onSubmit={signUpHandler}>
-            <h1>Login</h1>
+            <h1>Sign up</h1>
             <br></br>
             <label>Username:
                 <input onChange={(event) => setUsername(event.target.value)}/>

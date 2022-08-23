@@ -54,7 +54,8 @@ export const getAllUsers = async (setList) => {
         console.log(error);
     }
 }
-export const updateU = async (username, password, newUsername, newEmail, newPassword, setter) => {
+
+export const updateU = async (username, password, newUsername, newEmail, newPassword, setUser) => {
     try {
     console.log("updateU function called")
         const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`, {
@@ -68,8 +69,9 @@ export const updateU = async (username, password, newUsername, newEmail, newPass
                 "newPassword" : newPassword
             })
         });
-        console.log(response);
+        // console.log(response);
         const data = await response.json();
+        setUser(data.user)
         console.log(data);
         console.log("updateU function ended")
     } 
@@ -77,7 +79,8 @@ export const updateU = async (username, password, newUsername, newEmail, newPass
         console.log(error);
     }
 }
-export const deleteU = async (username, password, setter) => {
+
+export const deleteU = async (username, password, setUser) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`, {
             headers: {"Content-Type": "application/json"},
