@@ -12,7 +12,7 @@ const Marketplace = () => {
     useEffect(() => {
         fakeStore();
     },[])
-    console.log("fake: ", fake)
+    // console.log("fake: ", fake)
     
 
     const fakeStore = async () => {
