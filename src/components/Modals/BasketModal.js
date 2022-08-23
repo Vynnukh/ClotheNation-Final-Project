@@ -14,7 +14,7 @@ const BasketModal = (props) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, )
+    }, [])
 
     return(
         <div className={`modal ${props.showBasket ? "showBasket" : ""}`} onClick={props.onClose}>
@@ -23,22 +23,23 @@ const BasketModal = (props) => {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map((card, index) => {
+                    {props.basket.map(() => {
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                image={card.image}
-                                title={card.title}
-                                description={card.description}
-                                index={index}
+                                image={props.values.image}
+                                title={props.values.title}
+                                description={props.values.description}
+                                index={props.index}
                                 />
                             </div>
                         )
                     }
                 )
             }
+            
                 </div>
                 <div className="modal-footer">
                     <button onClick={props.onClose}>Close</button>
@@ -59,6 +60,7 @@ const BasketModalItem = ({basket, setBasket, image, title, description, index}) 
         <div>
             <div>
             <p>{title}</p>
+            <img src={image}></img>
             <p>{description}</p>
             </div>
             <button onClick={() => handleClick(index)}>Remove Item</button>

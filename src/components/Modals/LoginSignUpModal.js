@@ -22,7 +22,7 @@ const LoginSignUpModal = (props) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, )
+    }, [])
 
     return(
         <div className="modalStyle">

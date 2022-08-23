@@ -1,5 +1,4 @@
-
-
+// import UpdateUser from "./CRUDoperations/Update"
 
 const Account = ({loggedIn}) => {
 
@@ -18,6 +17,7 @@ const Account = ({loggedIn}) => {
           <div className="email">
             <p className="bold">Email</p>
             <p>Insert Email Here</p>
+            {/* <UpdateUser/> */}
           </div>
           <div className="username">
             <p className="bold">Username</p>

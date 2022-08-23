@@ -9,7 +9,7 @@ const Marketplace = () => {
     const [basket, setBasket] = useState(false)
     const [fake, setFake] = useState([]);
     // const [card, setCard] = useState([])
-    console.log(fake);
+    // console.log(fake);
     useEffect(() => {
         fakeStore();
     },[])
@@ -22,13 +22,14 @@ const Marketplace = () => {
         const jsonData = await response.json();
         console.log(jsonData);
         setFake(jsonData)
+        return {values: fake.url}
     }
     // fakeStore();
 
 
     return (
         <div>
-            <a href='#' onClick={() => setShowBasket(true)}>Basket</a>
+            <a href='#' onClick={() => setShowBasket(true)}><img src='../styles/Images/icons8-shopping-bag-24.png' alt='Shopping bag'></img></a>
             {fake.map((values) => {
                 return (
                     <div className='cards'>
