@@ -1,14 +1,14 @@
 import { useState } from "react"
-import { deleteU } from "../utils"
+import {deleteU} from "../../utils"
 
-const DeleteUser = ({setter}) => {
+const DeleteUser = ({setUser}) => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
 
   const deleteHandler = async (event) => {
     event.preventDefault();
-    await deleteU(username, password, setter)
+    await deleteU(username, password, setUser)
   }
 
 return (
