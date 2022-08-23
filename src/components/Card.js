@@ -8,7 +8,7 @@ const Card = ({values, basket, setBasket}) => {
             values: values
         })
     }, [])
-console.log("card log",card)
+// console.log("card log",card)
     const handleClick = () => {
         let shoppingCart = [...basket]
         shoppingCart.push(card)
