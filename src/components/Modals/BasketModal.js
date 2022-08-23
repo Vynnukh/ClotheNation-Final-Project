@@ -23,16 +23,16 @@ const BasketModal = (props) => {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map((values, index) => {
+                    {props.basket.map(() => {
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                image={values.image}
-                                title={values.title}
-                                description={values.description}
-                                index={index}
+                                image={props.values.image}
+                                title={props.values.title}
+                                description={props.values.description}
+                                index={props.index}
                                 />
                             </div>
                         )
