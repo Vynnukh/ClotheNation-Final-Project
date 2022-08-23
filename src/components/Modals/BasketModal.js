@@ -14,7 +14,7 @@ const BasketModal = (props) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
-    }, )
+    }, [])
 
     return(
         <div className={`modal ${props.showBasket ? "showBasket" : ""}`} onClick={props.onClose}>
@@ -23,22 +23,21 @@ const BasketModal = (props) => {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map((card, index) => {
+                    {props.basket.map(() => {
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                image={card.image}
-                                title={card.title}
-                                description={card.description}
-                                index={index}
+                                values={props.values}
+                                index={props.index}
                                 />
                             </div>
                         )
                     }
                 )
             }
+            
                 </div>
                 <div className="modal-footer">
                     <button onClick={props.onClose}>Close</button>
@@ -48,7 +47,7 @@ const BasketModal = (props) => {
     )
 }
 
-const BasketModalItem = ({basket, setBasket, image, title, description, index}) => {
+const BasketModalItem = ({basket, setBasket, values, index}) => {
     const handleClick = (index) => {
         let newBasketList = [...basket]
         newBasketList.splice(index, 1)
@@ -58,8 +57,7 @@ const BasketModalItem = ({basket, setBasket, image, title, description, index}) 
     return (
         <div>
             <div>
-            <p>{title}</p>
-            <p>{description}</p>
+            {values}
             </div>
             <button onClick={() => handleClick(index)}>Remove Item</button>
         </div>

@@ -6,20 +6,6 @@ const Home = () => {
 
     return (
         <Divhome>
-           <img src={mod} className="App-logomod" alt="logo" /> 
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
-           <img src={mod} className="App-logomod" alt="logo" />
            
            <H1>Welcome to ClotheNation</H1>
             <P1>Please Sign-Up or Login to browse the store</P1>
