@@ -23,14 +23,14 @@ const BasketModal = (props) => {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map((card, index) => {
+                    {props.basket.map((values, index) => {
                         
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                values={card.values}
+                                values={values}
                                 index={index}
                                 />
                             </div>
