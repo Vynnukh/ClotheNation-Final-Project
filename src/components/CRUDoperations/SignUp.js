@@ -14,9 +14,29 @@ const SignUp = ({setUser, setLoggedIn}) => {
     }
 
     return (
-        <form>
-            <label onSubmit={signUpHandler}>Username:
-                <input onChange = {(event) => setUsername(event.target.value)}/>
+    //     <form onSubmit={signUpHandler}>
+    //         {/* <label onSubmit={signUpHandler}> */}
+    //         <label>
+    //             Username:
+    //             <input onChange = {(event) => setUsername(event.target.value)}/>
+    //         </label>
+    //         <br></br>
+    //         <label>Email:
+    //             <input type="email" onChange={(event) => setEmail(event.target.value)}/>
+    //         </label>
+    //         <br></br>
+    //         <label>Password:
+    //             <input onChange={(event) => setPassword(event.target.value)}/>
+    //         </label>
+    //         <br></br>
+    //         <button type = "submit">Sign Up</button>
+    //     </form>
+    // )
+            <form onSubmit={signUpHandler}>
+            <h1>Login</h1>
+            <br></br>
+            <label>Username:
+                <input onChange={(event) => setUsername(event.target.value)}/>
             </label>
             <br></br>
             <label>Email:
@@ -27,9 +47,9 @@ const SignUp = ({setUser, setLoggedIn}) => {
                 <input onChange={(event) => setPassword(event.target.value)}/>
             </label>
             <br></br>
-            <button type = "submit">Sign Up</button>
+            <button type="submit">Signup</button>
         </form>
-    )
+            )
 }
 
 export default SignUp

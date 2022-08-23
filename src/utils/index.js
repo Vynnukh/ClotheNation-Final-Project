@@ -1,4 +1,4 @@
-export const signUp = async (username, password, email, setUser, setLoggedIn) => {
+export const signUp = async (username, email, password, setUser, setLoggedIn) => {
     try {
         // const response = await fetch("https://clothenation.herokuapp.com/user",{
         const response = await fetch(`${process.env.REACT_APP_BASE_URL}user`,{
@@ -6,13 +6,14 @@ export const signUp = async (username, password, email, setUser, setLoggedIn) =>
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 "username": username,
-                "password": password,
-                "email": email
+                "email": email,
+                "password": password
             })
         })
         const data = await response.json();
         console.log(data);
-        setUser(data.msg.username);
+        // setUser(data.msg.username);
+        setUser(data);
         setLoggedIn(true)
     } 
     catch(error) 
