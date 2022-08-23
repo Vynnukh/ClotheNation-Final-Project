@@ -2,7 +2,7 @@ import {useEffect} from "react"
 import "../../App.css"
 
 const BasketModal = (props) => {
-
+console.log("props:", props)
     const escapeKeyClose = (v) => {
         if((v.charCode || v.keyCode) === 27) {
             props.onClose()
@@ -23,21 +23,22 @@ const BasketModal = (props) => {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
-                    {props.basket.map(() => {
+                    {props.basket.map((values, index) => {
+                        
                         return (
                             <div>
                                 <BasketModalItem
                                 basket={props.basket}
                                 setBasket={props.setBasket}
-                                values={props.values}
-                                index={props.index}
+                                values={values.values}
+                                index={index}
                                 />
                             </div>
                         )
                     }
                 )
             }
-            
+           
                 </div>
                 <div className="modal-footer">
                     <button onClick={props.onClose}>Close</button>
@@ -52,12 +53,19 @@ const BasketModalItem = ({basket, setBasket, values, index}) => {
         let newBasketList = [...basket]
         newBasketList.splice(index, 1)
         setBasket(newBasketList)
-    }
+    } 
+
+
 
     return (
         <div>
             <div>
-            {values}
+                <div>
+            <img src={values.image}></img>
+            </div>
+            <h3>{values.title}</h3>
+            <p>{values.description}</p>
+            £{values.price}
             </div>
             <button onClick={() => handleClick(index)}>Remove Item</button>
         </div>
