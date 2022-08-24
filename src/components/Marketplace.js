@@ -1,7 +1,6 @@
 import Card from './Card';
 import BasketModal from "./Modals/BasketModal.js";
 import React,{useState,useEffect} from 'react';
-import { Divhome } from '../styles/Divhome.style';
 
 
 const Marketplace = ({loggedIn}) => {
@@ -44,11 +43,9 @@ const Marketplace = ({loggedIn}) => {
 
             <BasketModal title = "Basket" onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/>
         </div>: 
-        <Divhome>
-           
-        <H1>Welcome to ClotheNation</H1>
-         <P1>Please Sign-Up or Login to browse the store</P1>
-     </Divhome>}
+        <div className='marketBlock'>
+            <h2>You must be logged in to view the marketplace page.</h2>
+        </div>}
         </div>
     )
 }

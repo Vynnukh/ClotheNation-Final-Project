@@ -17,7 +17,7 @@ export const Divlogo = styled.div`
             flex-direction: row;
             margin-top: 30px;
             display: flex;
-            justify-content: center;         
+            justify-content: center;     
 `;
 
 export const Divpic = styled.div`

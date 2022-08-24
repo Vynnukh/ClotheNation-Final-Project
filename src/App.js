@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import styled from 'styled-components'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home.js"
 import Account from "./components/Account.js"
@@ -11,7 +10,7 @@ import ActivityFeed from "./components/ActivityFeed.js";
 import { useState, useEffect } from 'react';
 import { Header1 } from './styles/Header.style'
 import './App.css';
-import { Navlinks, Li1, NavBar1 } from './styles/Navlinks.style.js';
+import { Navlinks, Li1 } from './styles/Navlinks.style.js';
 import { Button } from './styles/Button.style';
 import { Divlogo } from './styles/Divhome.style';
 import c1 from './logo/c1.png';
@@ -20,7 +19,6 @@ import o from './logo/o.png';
 import t from './logo/t.png';
 import h from './logo/h.png';
 import e from './logo/e.png';
-import mod from './logo/mod.jpg';
 import n from './logo/n.png';
 import a from './logo/a.png';
 import t2 from './logo/t.png';
@@ -69,7 +67,6 @@ function App() {
           <img src={t} className="App-logot" alt="logo" />
           <img src={h} className="App-logoh" alt="logo" />
           <img src={e} className="App-logoe" alt="logo" />
-          <img src={mod} className="App-logomod" alt="logo" />
           <img src={n} className="App-logon" alt="logo" />
           <img src={a} className="App-logoa" alt="logo" />
           <img src={t2} className="App-logot2" alt="logo" />

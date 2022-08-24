@@ -71,6 +71,13 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
+h2 {
+  font-size: 40px;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 10px;
+  color: rgb(255, 255, 255);
+}
+
 p {
   font-size: 25px;
   font-family: 'Inconsolata', monospace;
@@ -94,6 +101,7 @@ a:hover {
   padding: 2px;
   background-color: rgb(108, 147, 154);
   font-family: 'Inconsolata', monospace;
+  text-align: center;
 }
 
 .accText {
@@ -128,6 +136,58 @@ a:hover {
   padding: 2px;
   background-color: rgb(108, 147, 154);
   font-family: 'Inconsolata', monospace;
+  text-align: center;
+}
+
+.marketBlock {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 2px;
+  background-color: rgb(108, 147, 154);
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+}
+
+
+
+
+
+.activityBlock {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 2px;
+    background-color: rgb(108, 147, 154);
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+}
+
+.accCard {
+  width: 400px;
+  padding: 10px 0px 0px 0px;
+  margin: 15px;
+  background-color: rgb(136, 189, 199);
+  outline: 2px rgb(101, 101, 101) solid;
+  box-shadow: 3px 6px;
+  transition: 0.6s ease-in-out;
+}
+
+.accCard:hover {
+  transform: scale(1.02);
+  box-shadow: 4px 7px;
+}
+
+.accImage {
+  max-width: 300px;
+}
+
+h3 {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  margin-left: 200px;
 }
 
 
@@ -190,13 +250,7 @@ button:hover {
   margin-right: 20px;
 }
 
-.ActivityFeedStyle {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: auto;
-}
+
 
 
 

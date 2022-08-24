@@ -1,5 +1,4 @@
 import { useState } from "react"
-// import { updateU } from "../utils"
 import {updateU} from "../../utils"
 
 const UpdateUser = ({setUser}) => {

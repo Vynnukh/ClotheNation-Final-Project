@@ -19,7 +19,7 @@ const Card = ({values, basket, setBasket}) => {
             <div className='card-container'>
                 <div className="card-text">
                 <img className="card-image" src={values.image}></img>
-                    <h3>{values.title}</h3>
+                    <h4>{values.title}</h4>
                     <div>
                         <p>
                             {/* {values.description} */}
