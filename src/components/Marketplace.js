@@ -1,6 +1,7 @@
 import Card from './Card';
 import BasketModal from "./Modals/BasketModal.js";
 import React,{useState,useEffect} from 'react';
+import { Divhome } from '../styles/Divhome.style';
 
 
 const Marketplace = ({loggedIn}) => {
@@ -8,7 +9,7 @@ const Marketplace = ({loggedIn}) => {
     const [showBasket, setShowBasket] = useState(false)
     const [basket, setBasket] = useState([])
     const [fake, setFake] = useState([]);
-   
+
     useEffect(() => {
         fakeStore();
     },[])
@@ -29,8 +30,12 @@ const Marketplace = ({loggedIn}) => {
     return (
         <div>
             {loggedIn ? 
+
         <div className='log'>
+
+
             <a href='#' onClick={() => setShowBasket(true)}><img src='/Images/icons8-shopping-bag-24.png' alt='Shopping bag'></img></a>
+            </div>
             {fake.map((values) => {
                 return (
                     <div className='cards'>
@@ -40,10 +45,12 @@ const Marketplace = ({loggedIn}) => {
             })}
 
             <BasketModal title = "Basket" onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/>
+
         </div>: <div>
             <h1>Welcome to Clothenation</h1>
             <p1>Please Sign Up or login to browse the store</p1>
             </div>}
+
         </div>
     )
 }

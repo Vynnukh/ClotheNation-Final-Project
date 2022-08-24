@@ -17,14 +17,12 @@ const Card = ({values, basket, setBasket}) => {
 // console.log("Values: ", values)
     return (
             <div className='card-container'>
-                <div className='card-image'>
-                    <img src={values.image}></img>
-                </div>
                 <div className="card-text">
+                <img className="card-image" src={values.image}></img>
                     <h3>{values.title}</h3>
                     <div>
                         <p>
-                            {values.description}
+                            {/* {values.description} */}
                         </p>
                         <p>
                             £{values.price}

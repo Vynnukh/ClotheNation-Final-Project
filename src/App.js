@@ -7,13 +7,13 @@ import Marketplace from "./components/Marketplace.js"
 import LoginSignUpModal from "./components/Modals/LoginSignUpModal.js"
 import Members from "./components/Members.js"
 import LogoutModal from "./components/Modals/LogoutModal.js";
+import ActivityFeed from "./components/ActivityFeed.js";
 import { useState, useEffect } from 'react';
 import { Header1 } from './styles/Header.style'
 import './App.css';
 import { Navlinks, Li1, NavBar1 } from './styles/Navlinks.style.js';
 import { Button } from './styles/Button.style';
-import { H1, P1 } from './styles/Text.style';
-import { Divhome, Divlogo, Divpic } from './styles/Divhome.style';
+import { Divlogo } from './styles/Divhome.style';
 import c1 from './logo/c1.png';
 import l from './logo/l.png';
 import o from './logo/o.png';
@@ -27,8 +27,6 @@ import t2 from './logo/t.png';
 import i from './logo/i.png';
 import o2 from './logo/o.png';
 import n2 from './logo/n.png';
-import photo2 from './logo/photo2.jpg';
-import photo from './logo/photo.jpg';
 
 
 
@@ -39,7 +37,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [user, setUser] = useState()
   //console.log("LoggedIn & SetLoggedIn in app.js: ", loggedIn, setLoggedIn)
-
+  console.log("SetLoggedIn", setLoggedIn)
   useEffect(() => {
     (async() => {
       const res = await fetch(`${process.env.REACT_APP_BASE_URL}health`)
@@ -86,24 +84,31 @@ function App() {
           <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
           }
           </div>
-      <NavBar1>
+      <div className="navBar">
         <Header1>
           <Navlinks>
 
             <Li1><Link to="/"><a>Home</a></Link></Li1>
+            <Li1><Link to="/ActivityFeed"><a>Activity Feed</a></Link></Li1>
             <Li1><Link to="/Account"><a>Account</a></Link></Li1>
             <Li1><Link to="/Members"><a>Members</a></Link></Li1>
             <Li1><Link to="/Marketplace"><a>Marketplace</a></Link></Li1>
           </Navlinks>
         </Header1>
         
-        <LogoutModal title = "Logout" onClose = {() => setShowLogout(false)} showLogout = {showLogout} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
+        <LogoutModal  title = "Logout" 
+                      onClose = {() => (setShowLogout(false), setLoggedIn(false))} 
+                      showLogout = {showLogout}
+                      loggedIn = {loggedIn}
+                      setLoggedIn = {setLoggedIn}
+                      />
 
 
         <LoginSignUpModal loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} title="Login/SignUp" onClose={() => setShow(false)} show={show}/>
-      </NavBar1>
+      </div>
       <Routes>
         <Route path='/' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
+        <Route path="/ActivityFeed" element = {<ActivityFeed loggedIn={loggedIn}/>}></Route>
         <Route path='/Account' element = {<Account loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
         <Route path="/Members" element = {<Members loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
         <Route path='/Marketplace' element = {<Marketplace loggedIn = {loggedIn}/>}></Route>
