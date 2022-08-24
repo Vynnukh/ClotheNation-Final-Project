@@ -11,18 +11,14 @@ const Marketplace = ({loggedIn}) => {
     useEffect(() => {
         fakeStore();
     },[])
-    // console.log("fake: ", fake)
     
 
     const fakeStore = async () => {
         const response = await fetch("https://fakestoreapi.com/products");
-        // console.log(response)
         const jsonData = await response.json();
-        console.log(jsonData);
         setFake(jsonData)
         return {values: fake.url}
     }
-    // fakeStore();
 
 
     return (
@@ -30,7 +26,7 @@ const Marketplace = ({loggedIn}) => {
             {loggedIn ? 
         <div>
             <div className='log'>
-            <a href='#' onClick={() => setShowBasket(true)}><img src='/Images/icons8-shopping-bag-24.png' alt='Shopping bag'></img></a>
+            <button className='addButton' href='#' onClick={() => setShowBasket(true)}>View Basket</button>
             </div>
             {fake.map((values) => {
                 return (
