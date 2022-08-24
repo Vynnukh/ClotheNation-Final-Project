@@ -23,7 +23,7 @@
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10;
   background-color: rgb (220, 219, 226, 0.8);
   opacity: 0;
   transition: all 0.5 ease-in-out;
@@ -44,7 +44,7 @@
 
 .modal-content {
   width: 500px;
-  height: fit-content;
+  height: 600px;
   margin: 15% auto;
   padding: 20px;
   border-radius: 26px;
