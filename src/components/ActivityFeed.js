@@ -1,9 +1,8 @@
-import {useState, UseEffect, useEffect} from "react"
+import {useState, useEffect} from "react"
 
 const ActivityFeed = ({loggedIn}) => {
 
     const [imgs, setImgs] = useState([])
-    const [displayImgs, setDisplayImgs] = useState(false)
 
     const fetchImg = async () => {
         const response = await fetch("https://picsum.photos/v2/list")
