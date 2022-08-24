@@ -38,8 +38,8 @@ const BasketModal = (props) => {
                     }
                 )
             }
-                <button className="addButton" onClick={props.onClose}>Close</button>
                 </div>
+                <button className="addButton" onClick={props.onClose}>Close</button>
             </div>
         </div>
     )
