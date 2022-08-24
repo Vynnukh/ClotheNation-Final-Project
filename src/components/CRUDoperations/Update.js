@@ -17,7 +17,6 @@ return (
       <div>
         <form onSubmit={updateHandler}>
         <div className="accBlock">
-          <h2>Sign up</h2>
           <br></br>
           <label>Username:
               <input onChange={(event) => setUsername(event.target.value)}/>
@@ -40,7 +39,7 @@ return (
           <input onChange = {(event) => setNewPassword(event.target.value)}/>
           </label>
           <br></br>
-          <button type="submit">Update Information</button>
+          <button className="addButton" type="submit">Update Information</button>
         </div>
       </form>
     </div>

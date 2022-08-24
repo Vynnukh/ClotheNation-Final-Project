@@ -29,21 +29,15 @@ const LoginSignUpModal = (props) => {
             <div className={`modal ${props.show ? "show" : ""}`} onClick={props.onClose}>
                 <div className="modal-content" onClick={x => x.stopPropagation()}>
                 <div className="modal-header">
-                    <h3>{props.title}</h3>
                     <br></br>
-                    <button onClick={props.onClose}>Close</button>
+                    <button className="addButton" onClick={props.onClose}>Close</button>
                     <br></br>
                 </div>
                 <div className="modal-body">
-                    
-                    
-                        <div>
-                            <p>Sign up or login to access your account</p>
-                                <h3>Sign up here:</h3>
+                        <div className="centerModal">
                                 <br></br>
                                 <SignUp setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
                                 <br></br>
-                                <h3>Or</h3>
                                 <Login setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
                         </div>
                     
