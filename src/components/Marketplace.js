@@ -32,7 +32,9 @@ const Marketplace = ({loggedIn}) => {
         <div>
             {loggedIn ? 
         <div>
+            <div className='log'>
             <a href='#' onClick={() => setShowBasket(true)}><img src='/Images/icons8-shopping-bag-24.png' alt='Shopping bag'></img></a>
+            </div>
             {fake.map((values) => {
                 return (
                     <div className='cards'>

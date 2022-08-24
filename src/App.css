@@ -207,7 +207,13 @@ button:hover {
   margin-right: 20px;
 }
 
-
+.ActivityFeedStyle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: auto;
+}
 
 
 
