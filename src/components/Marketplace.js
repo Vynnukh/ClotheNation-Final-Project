@@ -40,7 +40,7 @@ const Marketplace = ({loggedIn}) => {
                 )
             })}
 
-            <BasketModal title = "Basket" onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/>
+            <BasketModal onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/>
         </div>: 
         <div className='marketBlock'>
             <h2>You must be logged in to view the marketplace page.</h2>

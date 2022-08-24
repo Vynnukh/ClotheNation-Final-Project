@@ -28,12 +28,16 @@
   opacity: 0;
   transition: all 0.5 ease-in-out;
   pointer-events: none;
-  overflow: scroll;
 }
 
 .modal.show, .modal.showLogout, .modal.showBasket {
   opacity: 1;
   pointer-events: visible;
+}
+
+.modalImage {
+  height: 200px;
+  width: 200px;
 }
 
 
@@ -44,12 +48,27 @@
   margin: 15% auto;
   padding: 20px;
   border-radius: 26px;
-  background: whitesmoke;
+  background:rgb(108, 147, 154);
   border: 3px solid azure;
   transform: translateY(-150px);
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.modalBlock {
+  width: 500px;
+  height: fit-content;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 26px;
+  background:rgb(108, 147, 154);
+  border: 3px solid azure;
+  transform: translateY(-150px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 
@@ -305,6 +324,10 @@ button:hover {
 .addButton:hover {
   cursor: pointer;
   background-color: rgb(71, 177, 223);
+}
+
+.addButton:active {
+  transform: translateY(4px);
 }
 
 .card-image {

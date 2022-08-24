@@ -3,9 +3,8 @@
 
 const Logout = () => {
     return (
-    <div>
-        <h1>Temp message for Logout Page</h1>
-        <p>You have successfully logged out of your account.</p>
+    <div className="modalBlock">
+        <h2>You have successfully logged out of your account.</h2>
     </div>
     )  
 }

@@ -59,15 +59,14 @@ const BasketModalItem = ({basket, setBasket, values, index}) => {
 
     return (
         <div>
-            <div>
+            <div className="modal-content">
                 <div>
-            <img src={values.image}></img>
+            <img className="modalImage" src={values.image}></img>
             </div>
             <h3>{values.title}</h3>
-            <p>{values.description}</p>
             £{values.price}
             </div>
-            <button onClick={() => handleClick(index)}>Remove Item</button>
+            <button className='addButton' onClick={() => handleClick(index)}>Remove Item</button>
         </div>
         
     )

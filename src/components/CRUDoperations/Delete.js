@@ -22,7 +22,7 @@ return (
         <input onChange = {(event) => setPassword(event.target.value)}/>
       </label>
       <br></br>
-      <button type="submit">Click here to Delete User</button>
+      <button className="addButton" type="submit">Click here to Delete User</button>
     </form>
   </div>
 )

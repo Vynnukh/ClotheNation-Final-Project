@@ -34,8 +34,9 @@ function App() {
   const [showLogout, setShowLogout] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
   const [user, setUser] = useState()
-  //console.log("LoggedIn & SetLoggedIn in app.js: ", loggedIn, setLoggedIn)
+
   console.log("SetLoggedIn", setLoggedIn)
+
   useEffect(() => {
     (async() => {
       const res = await fetch(`${process.env.REACT_APP_BASE_URL}health`)
@@ -76,9 +77,9 @@ function App() {
           </Divlogo>
           <div className="log">
             {loggedIn ?
-          <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
+          <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log-out</a></Button></a>
           :
-          <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
+          <a href="#" onClick={() => setShow(true)}><Button><a>Log-in</a></Button></a>
           }
           </div>
       <div className="navBar">
@@ -117,10 +118,6 @@ function App() {
         <Route path='/Marketplace' element = {<Marketplace loggedIn = {loggedIn}/>}></Route>
       </Routes>
       </BrowserRouter>
-      {/* <Divpic>
-      <img src= {photo2} alt="girls2"/>
-      <img src= {photo} alt="girls"/>
-    </Divpic> */}
     </div>
     
   );
