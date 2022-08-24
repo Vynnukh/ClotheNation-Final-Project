@@ -2,7 +2,6 @@ import Card from './Card';
 import BasketModal from "./Modals/BasketModal.js";
 import React,{useState,useEffect} from 'react';
 import { Divhome } from '../styles/Divhome.style';
-import { H1,P1 } from '../styles/Text.style';
 
 
 const Marketplace = ({loggedIn}) => {
@@ -10,7 +9,7 @@ const Marketplace = ({loggedIn}) => {
     const [showBasket, setShowBasket] = useState(false)
     const [basket, setBasket] = useState([])
     const [fake, setFake] = useState([]);
-   
+
     useEffect(() => {
         fakeStore();
     },[])
