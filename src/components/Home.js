@@ -1,6 +1,4 @@
-import {useState, useEffect} from "react";
-import { Divhome } from '../styles/Divhome.style';
-import mod from '../logo/mod.jpg';
+
 const Home = () => {
 
     return (

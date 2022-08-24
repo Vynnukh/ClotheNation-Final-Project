@@ -23,8 +23,8 @@ useEffect(()=> {
                     }
                 )}  
             </div> : 
-            <div>
-                <p>You must be logged in to view the members page.</p>
+            <div className='membersBlock'>
+                <h2>You must be logged in to view the members page.</h2>
             </div>}
         </div>
     )

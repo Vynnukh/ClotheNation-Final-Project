@@ -1,5 +1,4 @@
 import { useState } from "react"
-// import { updateU } from "../utils"
 import {updateU} from "../../utils"
 
 const UpdateUser = ({setUser}) => {
@@ -17,30 +16,32 @@ const UpdateUser = ({setUser}) => {
 return (
       <div>
         <form onSubmit={updateHandler}>
-        <h1>Sign up</h1>
-        <br></br>
-        <label>Username:
-            <input onChange={(event) => setUsername(event.target.value)}/>
-        </label>
-        <br></br>
-        <label>Password:
-            <input onChange={(event) => setPassword(event.target.value)}/>
-        </label>
-        <br></br>
-        Update Information  
-        <label>New Username:
-        <input onChange = {(event) => setNewUsername(event.target.value)}/>
-        </label>
-        <br></br>
-        <label>New Email:
-        <input type="email" onChange = {(event) => setNewEmail(event.target.value)}/>
-        </label>
-        <br></br>
-        <label>New Password:
-        <input onChange = {(event) => setNewPassword(event.target.value)}/>
-        </label>
-        <br></br>
-        <button type="submit">Update Information</button>
+        <div className="accBlock">
+          <h2>Sign up</h2>
+          <br></br>
+          <label>Username:
+              <input onChange={(event) => setUsername(event.target.value)}/>
+          </label>
+          <br></br>
+          <label>Password:
+              <input onChange={(event) => setPassword(event.target.value)}/>
+          </label>
+          <br></br>
+          Update Information  
+          <label>New Username:
+          <input onChange = {(event) => setNewUsername(event.target.value)}/>
+          </label>
+          <br></br>
+          <label>New Email:
+          <input type="email" onChange = {(event) => setNewEmail(event.target.value)}/>
+          </label>
+          <br></br>
+          <label>New Password:
+          <input onChange = {(event) => setNewPassword(event.target.value)}/>
+          </label>
+          <br></br>
+          <button type="submit">Update Information</button>
+        </div>
       </form>
     </div>
    )

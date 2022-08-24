@@ -2,8 +2,6 @@ import Card from './Card';
 import BasketModal from "./Modals/BasketModal.js";
 import React,{useState,useEffect} from 'react';
 
-
-
 const Marketplace = ({loggedIn}) => {
 
     const [showBasket, setShowBasket] = useState(false)
@@ -44,11 +42,9 @@ const Marketplace = ({loggedIn}) => {
 
             <BasketModal title = "Basket" onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/>
         </div>: 
-        <div>
-           
-        <h1>Welcome to ClotheNation</h1>
-         <p1>Please Sign-Up or Login to browse the store</p1>
-     </div>}
+        <div className='marketBlock'>
+            <h2>You must be logged in to view the marketplace page.</h2>
+        </div>}
         </div>
     )
 }

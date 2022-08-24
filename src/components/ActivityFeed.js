@@ -16,24 +16,23 @@ const ActivityFeed = ({loggedIn}) => {
     }, [])
 
     return (
-        <div className="ActivityFeedStyle">
+        <div className="activityBlock">
             {loggedIn ? 
             <div>
-                
                 {imgs.map((item) => {
                     return (
                         <div>
-                            <div>
-                                <h3>{item.author}</h3>
-                                <img src={item.download_url} alt = "API Activity feed"></img>
+                            <div className="accCard">
+                                <img className="accImage" src={item.download_url} alt = "API Activity feed"></img>
+                                <h3>Posted by {item.author}</h3>
                             </div>
                         </div>
                     )
                 })}
             </div>
             :
-            <div>
-                <h3>You must be logged in to access the feed</h3>
+            <div className="activityBlock">
+                <h2>You must be logged in to access the activity feed.</h2>
             </div>}
         </div>
     )

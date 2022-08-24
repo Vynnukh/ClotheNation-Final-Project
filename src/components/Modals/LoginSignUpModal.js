@@ -2,7 +2,7 @@ import { useEffect} from "react"
 import SignUp from "../CRUDoperations/SignUp.js"
 import {Login} from "../CRUDoperations/Login.js"
 import "../../App.css"
-// loggedIn, setUser, setLoggedIn
+
 const LoginSignUpModal = (props) => {
 
     // const [user, setUser] = useState()

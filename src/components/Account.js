@@ -1,6 +1,5 @@
 import DeleteUser from "./CRUDoperations/Delete.js";
 import UpdateUser from "./CRUDoperations/Update.js";
-// import UpdateUser from "./Modals/Update.js";
 
 const Account = ({loggedIn}) => {
 
@@ -12,8 +11,8 @@ const Account = ({loggedIn}) => {
           <DeleteUser/>
         </div>
         : 
-        <div>
-          <p>You must be logged in to access the accounts page.</p>
+        <div className="accBlock">
+          <h2>You must be logged in to access the accounts page.</h2>
         </div>}
     </div>
   )  
