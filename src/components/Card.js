@@ -1,14 +1,8 @@
 import {useEffect, useState} from "react"
 
-const Card = ({values, basket, setBasket}) => {
+const Card = ({values, setBasket}) => {
 
-    const [card, setCard] = useState({})
-    useEffect(() => {
-        console.log("basket in useEffect: ", basket)
-        setCard({
-            values: values
-        })
-    }, [])
+
     const handleClick = () => {
         let shoppingCart = [values]
         // shoppingCart.push(values)
