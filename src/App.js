@@ -101,7 +101,13 @@ function App() {
                       />
 
 
-        <LoginSignUpModal loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} title="Login/SignUp" onClose={() => setShow(false)} show={show}/>
+        <LoginSignUpModal   loggedIn={loggedIn} 
+                            setLoggedIn={setLoggedIn} 
+                            setUser={setUser} 
+                            title="Login/SignUp" 
+                            onClose={() => setShow(false)} 
+                            show={show}
+                            />
       </div>
       <Routes>
         <Route path='/' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
