@@ -11,15 +11,9 @@ justify-content: space-around;
         
 `;
 
-export const NavBar1 = styled.nav`
-display: flex;
-justify-content: center;
-align-items: center;
-box-shadow: 0 1px 8px #ddd;
-`;
 
 export const Li1 = styled.li`
-            color: aqua;
+            color: rgb(108, 147, 154);
             display: inline; 
             margin-inline: 70px;
             

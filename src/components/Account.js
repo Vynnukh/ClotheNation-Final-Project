@@ -5,16 +5,16 @@ import UpdateUser from "./CRUDoperations/Update.js";
 const Account = ({loggedIn}) => {
 
   return (
-    <div>
-      {loggedIn ? 
-      <div>
-    <UpdateUser/>
-    <DeleteUser/>
-    </div>
-    : 
-    <div>
-    <h1>BUGGER OFF</h1>
-        <h3>You must be logged in to access your account</h3></div>}
+    <div className="accBlock">
+        {loggedIn ? 
+        <div>
+          <UpdateUser/>
+          <DeleteUser/>
+        </div>
+        : 
+        <div>
+          <p>You must be logged in to access the accounts page.</p>
+        </div>}
     </div>
   )  
 }

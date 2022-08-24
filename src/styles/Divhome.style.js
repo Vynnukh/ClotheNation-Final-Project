@@ -3,9 +3,13 @@ import styled from 'styled-components'
 
 export const Divhome = styled.div`
             background-color: grey;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
             align-items: center;
-            padding: 40px 265px;
-            max-width: 100%;
+            padding: 40px;
+            max-width: 75%;
 `;
 
 export const Divlogo = styled.div`

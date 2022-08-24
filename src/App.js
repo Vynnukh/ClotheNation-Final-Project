@@ -13,8 +13,7 @@ import { Header1 } from './styles/Header.style'
 import './App.css';
 import { Navlinks, Li1, NavBar1 } from './styles/Navlinks.style.js';
 import { Button } from './styles/Button.style';
-import { H1, P1 } from './styles/Text.style';
-import { Divhome, Divlogo, Divpic } from './styles/Divhome.style';
+import { Divlogo } from './styles/Divhome.style';
 import c1 from './logo/c1.png';
 import l from './logo/l.png';
 import o from './logo/o.png';
@@ -28,8 +27,6 @@ import t2 from './logo/t.png';
 import i from './logo/i.png';
 import o2 from './logo/o.png';
 import n2 from './logo/n.png';
-import photo2 from './logo/photo2.jpg';
-import photo from './logo/photo.jpg';
 
 
 
@@ -87,7 +84,7 @@ function App() {
           <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
           }
           </div>
-      <NavBar1>
+      <div className="navBar">
         <Header1>
           <Navlinks>
 
@@ -108,7 +105,7 @@ function App() {
 
 
         <LoginSignUpModal loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} title="Login/SignUp" onClose={() => setShow(false)} show={show}/>
-      </NavBar1>
+      </div>
       <Routes>
         <Route path='/' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}></Route>
         <Route path="/ActivityFeed" element = {<ActivityFeed loggedIn={loggedIn}/>}></Route>
