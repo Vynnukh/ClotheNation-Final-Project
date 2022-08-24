@@ -44,11 +44,11 @@ const Marketplace = ({loggedIn}) => {
 
             <BasketModal title = "Basket" onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/>
         </div>: 
-        <Divhome>
-           
-        <H1>Welcome to ClotheNation</H1>
-         <P1>Please Sign-Up or Login to browse the store</P1>
-     </Divhome>}
+        <div>
+        <h1>Welcome to the Marketplace.</h1>
+        <p>Please sign in to view this page.</p>
+        </div>
+        }
         </div>
     )
 }
