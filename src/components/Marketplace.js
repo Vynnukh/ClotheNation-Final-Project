@@ -1,8 +1,7 @@
 import Card from './Card';
 import BasketModal from "./Modals/BasketModal.js";
 import React,{useState,useEffect} from 'react';
-import { Divhome } from '../styles/Divhome.style';
-import { H1,P1 } from '../styles/Text.style';
+
 
 
 const Marketplace = ({loggedIn}) => {
@@ -43,11 +42,11 @@ const Marketplace = ({loggedIn}) => {
 
             <BasketModal title = "Basket" onClose={() => setShowBasket(false)} showBasket={showBasket} basket={basket} setBasket={setBasket}/>
         </div>: 
-        <Divhome>
+        <div>
            
-        <H1>Welcome to ClotheNation</H1>
-         <P1>Please Sign-Up or Login to browse the store</P1>
-     </Divhome>}
+        <h1>Welcome to ClotheNation</h1>
+         <p1>Please Sign-Up or Login to browse the store</p1>
+     </div>}
         </div>
     )
 }
