@@ -6,11 +6,15 @@
 }
 
 .navBar {
-  background-color: rgb(174, 174, 174);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: rgb(108, 147, 154);
   text-align: center;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 10px;
   padding: 0rem;
 }
 
@@ -24,6 +28,7 @@
   opacity: 0;
   transition: all 0.5 ease-in-out;
   pointer-events: none;
+  overflow: scroll;
 }
 
 .modal.show, .modal.showLogout, .modal.showBasket {
@@ -52,18 +57,43 @@
   display:flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px;
+  margin: 20px;
   padding: 2px;
   background-color: rgb(108, 147, 154);
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 10px;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  font-size: 25px;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 1px;
+  color: white;
+}
+
+a {
+  color:rgb(0, 0, 0);
+}
+
+a:hover {
+  color:aqua;
 }
 
 .accBlock {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 450px;
-  background-color: antiquewhite;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 2px;
+  background-color: rgb(108, 147, 154);
+  font-family: 'Inconsolata', monospace;
 }
 
 .accText {
@@ -90,63 +120,16 @@
 }
 
 
-
-/* MARKET CSS */
-
-.cards {
-  /* position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  display: flex;
-  justify-content: center;
-  background-color: rgb(198, 198, 198);
-  margin: 20px;
-  padding: 30px;
-  max-width: 75%;
-}
-
-img {
-  max-width: 100px;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  flex-direction: row;
-  font-family: 'Inconsolata', monospace;
-  background-color: #f3f3f3;
-}
-
-.card-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.membersBlock {
+  display:flex;
   flex-direction: column;
-  padding: 10px;
-  border: solid 1px black;
-}
-
-h3 {
-  color: #61dafb;
-}
-
-.card-text, p {
-  color: #207eb1;
-}
-
-.addButton {
-  padding: 10px;
-  margin: 10px;
+  align-items: center;
+  margin: 20px;
+  padding: 2px;
+  background-color: rgb(108, 147, 154);
   font-family: 'Inconsolata', monospace;
 }
 
-.addButton:hover {
-  cursor: pointer;
-  color: #207eb1;
-  background-color: #d1d1d1;
-}
 
 
 
@@ -185,7 +168,7 @@ input {
   color: #f3f3f3;
 }
 
-button {
+/* button {
   padding: 10px;
   margin: 10px;
   font-family: 'Inconsolata', monospace;
@@ -193,9 +176,9 @@ button {
 
 button:hover {
   cursor: pointer;
-  color: #207eb1;
+  color: rgb(108, 147, 154);
   background-color: #d1d1d1;
-}
+} */
 
 
 
@@ -220,37 +203,23 @@ button:hover {
 
 
 
-
-/* .market {
-  background-color: antiquewhite;
-  max-width: 1300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 .cards {
-  background-color: rgb(250, 250, 250);
-  width: 28%;
-  margin: 10px;
-  padding: 20px;
   display: inline-block;
+  flex-direction: row;
+  align-content: center;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: 20px;
 }
 
 .card-container {
-  background-color: rgb(150, 105, 105);
-  margin: 10px;
-  padding: 25px;
-  outline: 2px rgb(101, 101, 101) solid;  
+  background-color: rgb(108, 147, 154);
+  width: 230px;
+  padding: 10px;
+  outline: 2px rgb(101, 101, 101) solid;
   box-shadow: 3px 6px;
   transition: 0.6s ease-in-out;
   font-family: 'Inconsolata', monospace;
-
-  width: 28%px;
+  text-align: center;
 }
 
 .card-container:hover {
@@ -258,14 +227,14 @@ button:hover {
   box-shadow: 4px 7px;
 }
 
-.card-title {
-  font-size: 25px;
+.card-text {
+  display: inline-block;
+  justify-content: center;
   text-align: center;
+  flex-direction: column;
+  overflow: visible;
 }
 
-p {
-  text-align: center;
-}
 
 .addButton {
   padding: 10px;
@@ -278,10 +247,13 @@ p {
   background-color: rgb(71, 177, 223);
 }
 
-.card-container, img {
-  width: 300px;
-  object-fit: contain;
-} */
+.card-image {
+  height: 200px;
+  width: 200px;
+}
+
+
+
 
 .App-logoc1 {
   height: 3.5vmin;
@@ -469,11 +441,4 @@ p {
   }
 }
 
-a {
-  color:rgb(119, 119, 154);
-}
-
-a:hover {
-  color:aqua;
-}
 

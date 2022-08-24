@@ -9,7 +9,7 @@ useEffect(()=> {
     getAllUsers(setUserList);
 },[])
     return (
-        <div>
+        <div className='membersBlock'>
             {loggedIn ?
             <div>
             <h1>Welcome to Members Page</h1>
@@ -24,7 +24,7 @@ useEffect(()=> {
                 )}  
             </div> : 
             <div>
-                <h2>You must be logged in to view members</h2>
+                <p>You must be logged in to view the members page.</p>
             </div>}
         </div>
     )
