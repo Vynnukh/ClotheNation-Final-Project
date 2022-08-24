@@ -15,12 +15,12 @@ const BasketModal = (props) => {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
     }, [])
+    
 
     return(
         <div className={`modal ${props.showBasket ? "showBasket" : ""}`} onClick={props.onClose}>
             <div className="modal-content" onClick={v => v.stopPropagation()}>
                 <div className="modal-header">
-                    <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
                     {props.basket.map((values, index) => {
@@ -38,10 +38,7 @@ const BasketModal = (props) => {
                     }
                 )
             }
-           
-                </div>
-                <div className="modal-footer">
-                    <button onClick={props.onClose}>Close</button>
+                <button className="addButton" onClick={props.onClose}>Close</button>
                 </div>
             </div>
         </div>
@@ -59,14 +56,14 @@ const BasketModalItem = ({basket, setBasket, values, index}) => {
 
     return (
         <div>
-            <div className="modal-content">
+            <div className="basketModal">
                 <div>
             <img className="modalImage" src={values.image}></img>
             </div>
-            <h3>{values.title}</h3>
+            <h4>{values.title}</h4>
             £{values.price}
-            </div>
             <button className='addButton' onClick={() => handleClick(index)}>Remove Item</button>
+            </div>
         </div>
         
     )
