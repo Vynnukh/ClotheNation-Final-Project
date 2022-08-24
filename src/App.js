@@ -99,7 +99,12 @@ function App() {
           </Navlinks>
         </Header1>
         
-        <LogoutModal title = "Logout" onClose = {() => setShowLogout(false)} showLogout = {showLogout} loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
+        <LogoutModal  title = "Logout" 
+                      onClose = {() => (setShowLogout(false), setLoggedIn(false))} 
+                      showLogout = {showLogout}
+                      loggedIn = {loggedIn}
+                      setLoggedIn = {setLoggedIn}
+                      />
 
 
         <LoginSignUpModal loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} title="Login/SignUp" onClose={() => setShow(false)} show={show}/>
