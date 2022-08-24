@@ -10,3 +10,5 @@ Day 4 - began work on the basket modal
 
 Day 5 - set up hosting for the site on netlify - https://neon-arithmetic-be85c1.netlify.app/
 
+Day 6 - Fixed basics of the basket modal, added conditional rendering on the marketplace place
+
