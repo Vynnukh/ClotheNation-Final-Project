@@ -13,8 +13,7 @@ useEffect(()=> {
             {loggedIn ?
             <div>
             <h1>Welcome to Members Page</h1>
-            <button onClick={(event) => setUserDisp(!displayUsers)}>Toggle Users</button>
-                {displayUsers && userList.map((item,index) => {
+            {userList.map((item,index) => {
                 return (
                         <div>
                         <h2>{item}</h2>
