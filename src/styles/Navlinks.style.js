@@ -5,8 +5,8 @@ import styled from 'styled-components'
 export const Navlinks = styled.ul` 
 display: flex;
 justify-content: space-around;
-            font-size:20px;
-            font-family: 'Inconsolata', monospace;
+font-size:20px;
+font-family: 'Inconsolata', monospace;
             
         
 `;
