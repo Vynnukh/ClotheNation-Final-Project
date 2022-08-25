@@ -1,7 +1,11 @@
 import {useEffect} from "react"
+import {useState} from "react"
 import "../../App.css"
 
 const BasketModal = (props) => {
+
+    const [ total, setTotal ] = useState(0)
+
 // console.log("props:", props)
     const escapeKeyClose = (v) => {
         if((v.charCode || v.keyCode) === 27) {
@@ -16,6 +20,19 @@ const BasketModal = (props) => {
         }
     }, [])
     
+
+    function totalBasket() {
+
+        let sum = 0
+        for (let i = 0; i < props.basket.length; i++) {
+          sum += parseInt(props.basket[i].price)
+        }
+        setTotal( sum )
+      }
+
+      useEffect(() => {
+        totalBasket();
+      }, [props.basket]);
 
     return(
         <div className={`modal ${props.showBasket ? "showBasket" : ""}`} onClick={props.onClose}>
@@ -33,6 +50,7 @@ const BasketModal = (props) => {
                                 values={values}
                                 index={index}
                                 />
+                                {total ? <p>Total: £{total}.00</p> : <span></span>}
                             </div>
                         )
                     }
