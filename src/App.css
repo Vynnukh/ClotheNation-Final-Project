@@ -10,9 +10,6 @@
 li {
   display:inline;
   padding: 5px 50px
-  
-  
-
 }
 
 .piccy {
@@ -102,18 +99,16 @@ li {
   pointer-events: visible;
 }
 
-.modalImage {
+/* .modalImage {
   height: 200px;
   width: 200px;
-}
-
+} */
 
 
 .modal-content {
   width: 500px;
   height: 600px;
   margin: 15% auto;
-  padding: 20px;
   border-radius: 26px;
   background:rgb(108, 147, 154);
   border: 3px solid azure;
@@ -124,12 +119,22 @@ li {
   overflow-y: initial !important
 }
 
+.modal-header {
+  height: 50px;
+  margin: 25px;
+}
+
 .modal-body{
+  margin: 25px;
   height: 80vh;
   overflow-y: auto;
 }
 
-.modalBlock {
+input {
+  margin: 10px;
+}
+
+/* .modalBlock {
   width: 500px;
   height: fit-content;
   margin: 15% auto;
@@ -142,8 +147,7 @@ li {
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
-
+} */
 
 .homeBlock {
   display:flex;
@@ -219,7 +223,6 @@ a:hover {
   cursor: pointer;
 }
 
-
 .membersBlock {
   display:flex;
   flex-direction: column;
@@ -241,10 +244,6 @@ a:hover {
   font-family: 'Inconsolata', monospace;
   text-align: center;
 }
-
-
-
-
 
 .activityBlock {
     display:flex;
@@ -282,9 +281,6 @@ h3 {
   margin-left: 200px;
 }
 
-
-
-
 form {
   display: flex;
   align-items: center;
@@ -297,12 +293,6 @@ input {
   color: #f3f3f3;
 }
 
-
-
-
-
-
-
 .log {
   display: flex;
   justify-content:center;
@@ -310,9 +300,6 @@ input {
   padding: 25px;
 
 }
-
-
-
 
 .basketModal {
   width: 300px;
@@ -326,14 +313,6 @@ input {
   flex-direction: column;
   text-align: center;
 }
-
-
-
-
-
-
-
-
 
 .cards {
   display: inline-block;
@@ -367,7 +346,6 @@ input {
   overflow: visible;
 }
 
-
 .addButton {
   padding: 10px;
   background-color: #aeabab;
@@ -387,9 +365,6 @@ input {
   height: 200px;
   width: 200px;
 }
-
-
-
 
 .App-logoc1 {
   height: 4.5vmin;
@@ -420,8 +395,6 @@ input {
   height: 4.5vmin;
   pointer-events: none;
 }
-
-
 
 .App-logon {
   height: 4.5vmin;
@@ -528,20 +501,6 @@ input {
   }
 }
 
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
-
-
-
-
 .App-header {
   background-color: #c80c0c;
   min-height: 100vh;
@@ -552,7 +511,6 @@ input {
   font-size: calc(20px + 2vmin);
   color: white;
 }
-
 
 .App-header {
   background-color: #282c34;

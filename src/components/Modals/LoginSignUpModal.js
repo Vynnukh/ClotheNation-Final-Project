@@ -4,9 +4,8 @@ import {Login} from "../CRUDoperations/Login.js"
 import "../../App.css"
 
 const LoginSignUpModal = (props) => {
+console.log("Props in login modal: ", props)
 
-    // const [user, setUser] = useState()
-    // const [loggedIn, setLoggedIn] = useState()
 
     const escapeKeyClose = (x) => {
         try {
@@ -23,10 +22,11 @@ const LoginSignUpModal = (props) => {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
     }, [])
-
     return(
         <div className="modalStyle">
+            
             <div className={`modal ${props.show ? "show" : ""}`} onClick={props.onClose}>
+                {props.loggedIn ? props.onClose : ""}
                 <div className="modal-content" onClick={x => x.stopPropagation()}>
                 <div className="modal-header">
                     <br></br>
@@ -36,9 +36,9 @@ const LoginSignUpModal = (props) => {
                 <div className="modal-body">
                         <div className="centerModal">
                                 <br></br>
-                                <SignUp setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
+                                <SignUp setUser = {props.setUser} setLoggedIn = {props.setLoggedIn} loggedIn = {props.loggedIn}/>
                                 <br></br>
-                                <Login setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
+                                <Login setUser = {props.setUser} setLoggedIn = {props.setLoggedIn} loggedIn = {props.loggedIn}/>
                         </div>
                     
                 </div>
@@ -50,6 +50,9 @@ const LoginSignUpModal = (props) => {
             </div>
         </div>
     )
+    
 }
+
+
 
 export default LoginSignUpModal
