@@ -13,18 +13,28 @@ import './App.css';
 import { Navlinks, Li1 } from './styles/Navlinks.style.js';
 import { Button } from './styles/Button.style';
 import { Divlogo } from './styles/Divhome.style';
-import c1 from './logo/c1.png';
-import l from './logo/l.png';
-import o from './logo/o.png';
-import t from './logo/t.png';
-import h from './logo/h.png';
-import e from './logo/e.png';
-import n from './logo/n.png';
-import a from './logo/a.png';
-import t2 from './logo/t.png';
-import i from './logo/i.png';
-import o2 from './logo/o.png';
-import n2 from './logo/n.png';
+import C222 from './logo/C222.png';
+import l222 from './logo/l222.png';
+import O2222 from './logo/O2222.png';
+import t222 from './logo/t222.png';
+import h222 from './logo/h222.png';
+import e222 from './logo/e222.png';
+import nmid from './logo/nmid.png';
+import a2 from './logo/a2.png';
+import ttwo from './logo/ttwo.png';
+import i22 from './logo/i22.png';
+import O33 from './logo/O33.png';
+import n222 from './logo/n222.png';
+import Mainpic  from './logo/images.js'
+import mod5 from './logo/mod5.jpg'
+import model10 from './logo/model10.jpg'
+import mod40 from './logo/mod40.jpg'
+import mod from './logo/mod.jpg'
+import mod100 from './logo/mod100.jpg'
+import mod200 from './logo/mod200.jpg'
+import decor from './logo/decor.jpg'
+import decor2 from './logo/decor2.jpg'
+import cn from './logo/cn.png'
 
 
 
@@ -60,36 +70,62 @@ function App() {
       
 
       <BrowserRouter>
+      <div>
+      
+      <img src={decor} className="decor" alt="logo" />
+      
+      
+      
+
+      </div>
       <Divlogo>
-          <img src={c1} className="App-logoc1" alt="logo" />
-          <img src={l} className="App-logol" alt="logo" />
-          <img src={o} className="App-logoo" alt="logo" />
-          <img src={t} className="App-logot" alt="logo" />
-          <img src={h} className="App-logoh" alt="logo" />
-          <img src={e} className="App-logoe" alt="logo" />
-          <img src={n} className="App-logon" alt="logo" />
-          <img src={a} className="App-logoa" alt="logo" />
-          <img src={t2} className="App-logot2" alt="logo" />
-          <img src={i} className="App-logoi" alt="logo" />
-          <img src={o2} className="App-logoo2" alt="logo" />
-          <img src={n2} className="App-logon2" alt="logo" />
+      <img src={mod} className="piccy2" alt="logo" />
+      <img src={mod100} className="piccy2" alt="logo" />
+      <img src={mod5} className="piccy2" alt="logo" />
+      <img src={mod40} className="piccy2" alt="logo" />
+      <img src={model10} className="piccy2" alt="logo" />
+      <img src={mod200} className="piccy2" alt="logo" />
+      
+      
+          <img src={C222} className="App-logoc1" alt="logo" />
+          <img src={l222} className="App-logol" alt="logo" />
+          <img src={O2222} className="App-logoo" alt="logo" />
+          <img src={t222} className="App-logot" alt="logo" />
+          <img src={h222} className="App-logoh" alt="logo" />
+          <img src={e222} className="App-logoe" alt="logo" />
+          <img src={nmid} className="App-logon" alt="logo" />
+          <img src={a2} className="App-logoa" alt="logo" />
+          <img src={ttwo} className="App-logot2" alt="logo" />
+          <img src={i22} className="App-logoi" alt="logo" />
+          <img src={O33} className="App-logoo2" alt="logo" />
+          <img src={n222} className="App-logon2" alt="logo" />
+      <img src={model10} className="piccy2" alt="logo" />
+      <img src={mod200} className="piccy2" alt="logo" />
+      <img src={mod40} className="piccy2" alt="logo" />
+      <img src={mod5} className="piccy2" alt="logo" />
+      <img src={mod100} className="piccy2" alt="logo" />
+      <img src={mod} className="piccy2" alt="logo" />
+      
           </Divlogo>
+          
           <div className="log">
+          <img src={decor2} className="decor2" alt="logo" />
             {loggedIn ?
           <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
           :
           <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
           }
+          <img src={decor2} className="decor2" alt="logo" />
           </div>
       <div className="navBar">
         <Header1>
           <Navlinks>
 
-            <Li1><Link to="/"><a>Home</a></Link></Li1>
-            <Li1><Link to="/ActivityFeed"><a>Activity Feed</a></Link></Li1>
-            <Li1><Link to="/Account"><a>Account</a></Link></Li1>
-            <Li1><Link to="/Members"><a>Members</a></Link></Li1>
-            <Li1><Link to="/Marketplace"><a>Marketplace</a></Link></Li1>
+            <ul className = "homerun"><li><Link exact to="/">Home</Link></li>
+            <li><Link to="/ActivityFeed">Activity Feed</Link></li>
+            <li> <Link to="/Account">Account</Link></li>
+            <li><Link to="/Members">Members</Link></li>
+            <li><Link to="/Marketplace">Marketplace</Link></li></ul>
           </Navlinks>
         </Header1>
         
@@ -117,10 +153,7 @@ function App() {
         <Route path='/Marketplace' element = {<Marketplace loggedIn = {loggedIn}/>}></Route>
       </Routes>
       </BrowserRouter>
-      {/* <Divpic>
-      <img src= {photo2} alt="girls2"/>
-      <img src= {photo} alt="girls"/>
-    </Divpic> */}
+      <Mainpic/>
     </div>
     
   );

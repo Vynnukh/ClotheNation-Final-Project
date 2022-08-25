@@ -16,7 +16,6 @@ export const Divlogo = styled.div`
             display:flex;
             flex-direction: row;
             margin-top: 30px;
-            display: flex;
             justify-content: center;     
 `;
 
