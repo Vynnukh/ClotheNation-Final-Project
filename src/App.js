@@ -133,8 +133,7 @@ function App() {
           </Navlinks>
         </Header1>
         
-        <LogoutModal  title = "Logout" 
-                      onClose = {() => (setShowLogout(false), setLoggedIn(false))} 
+        <LogoutModal  onClose = {() => (setShowLogout(false), setLoggedIn(false))} 
                       showLogout = {showLogout}
                       loggedIn = {loggedIn}
                       setLoggedIn = {setLoggedIn}

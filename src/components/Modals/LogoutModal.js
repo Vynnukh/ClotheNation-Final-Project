@@ -27,12 +27,12 @@ const LogoutModal = (props, setUser, setLoggedIn) => {
                 <div className="modal-content" onClick={k => k.stopPropagation()}>
                     <div className="modal-header">
                         
-                        <h3>{props.title}</h3>
                     </div>
                     <div className="modal-body">
                         
-                        <div>
-                            <Logout setUser={setUser} setLoggedIn={setLoggedIn} />
+                        <div className="center-modal">
+                            <br></br>
+                            <Logout setUser={setUser} setLoggedIn={setLoggedIn}/>
                             
 
                         </div>
