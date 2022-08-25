@@ -40,7 +40,7 @@ const LogoutModal = (props, setUser, setLoggedIn) => {
                     </div>
                     <div className="modal-footer">
                         
-                        <button onClick={props.onClose}>Close</button>
+                        <button className="addButton" onClick={props.onClose}>Close</button>
                     </div>
                 </div>
             </div>

@@ -7,8 +7,11 @@ export const Login = ({setUser, setLoggedIn}) => {
     const [password, setPassword] = useState()
 
     const loginHandler = async (event) => {
+
         event.preventDefault()
         await login(username, password, setUser, setLoggedIn)
+        setUsername("")
+        setPassword("")
     }
 
     return (
@@ -16,14 +19,16 @@ export const Login = ({setUser, setLoggedIn}) => {
             <h1>Login</h1>
             <br></br>
             <label>Username:
-                <input onChange={(event) => setUsername(event.target.value)}/>
+            <input value={username} onChange={(event) => setUsername(event.target.value)} required/>
+                {/* <input onChange={(event) => setUsername(event.target.value)}/> */}
             </label>
             <br></br>
             <label>Password:
-                <input onChange={(event) => setPassword(event.target.value)}/>
+            <input value={password} type="password" onChange={(event) => setPassword(event.target.value)} required/>
+                {/* <input onChange={(event) => setPassword(event.target.value)}/> */}
             </label>
             <br></br>
-            <button type="submit">Login</button>
+            <button className="addButton" type="submit">Login</button>
         </form>
     )
 }

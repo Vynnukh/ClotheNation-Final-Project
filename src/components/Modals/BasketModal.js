@@ -1,7 +1,11 @@
 import {useEffect} from "react"
+import {useState} from "react"
 import "../../App.css"
 
 const BasketModal = (props) => {
+
+    const [ total, setTotal ] = useState(0)
+
 // console.log("props:", props)
     const escapeKeyClose = (v) => {
         if((v.charCode || v.keyCode) === 27) {
@@ -15,12 +19,25 @@ const BasketModal = (props) => {
             document.body.removeEventListener("keydown", escapeKeyClose)
         }
     }, [])
+    
+
+    function totalBasket() {
+
+        let sum = 0
+        for (let i = 0; i < props.basket.length; i++) {
+          sum += parseInt(props.basket[i].price)
+        }
+        setTotal( sum )
+      }
+
+      useEffect(() => {
+        totalBasket();
+      }, [props.basket]);
 
     return(
         <div className={`modal ${props.showBasket ? "showBasket" : ""}`} onClick={props.onClose}>
             <div className="modal-content" onClick={v => v.stopPropagation()}>
                 <div className="modal-header">
-                    <h3>{props.title}</h3>
                 </div>
                 <div className="modal-body">
                     {props.basket.map((values, index) => {
@@ -33,16 +50,14 @@ const BasketModal = (props) => {
                                 values={values}
                                 index={index}
                                 />
+                                {total ? <p>Total: £{total}.00</p> : <span></span>}
                             </div>
                         )
                     }
                 )
             }
-           
                 </div>
-                <div className="modal-footer">
-                    <button onClick={props.onClose}>Close</button>
-                </div>
+                <button className="addButton" onClick={props.onClose}>Close</button>
             </div>
         </div>
     )
@@ -59,15 +74,14 @@ const BasketModalItem = ({basket, setBasket, values, index}) => {
 
     return (
         <div>
-            <div>
+            <div className="basketModal">
                 <div>
-            <img src={values.image}></img>
+            <img className="modalImage" src={values.image}></img>
             </div>
-            <h3>{values.title}</h3>
-            <p>{values.description}</p>
+            <h4>{values.title}</h4>
             £{values.price}
+            <button className='addButton' onClick={() => handleClick(index)}>Remove Item</button>
             </div>
-            <button onClick={() => handleClick(index)}>Remove Item</button>
         </div>
         
     )

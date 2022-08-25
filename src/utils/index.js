@@ -32,9 +32,16 @@ export const login = async (username, password, setUser, setLoggedIn) => {
             })
         })
         const data = await response.json()
-        console.log(data.user)
-        setUser(data.user)
-        setLoggedIn(true)
+        // console.log(data.user)
+        // setUser(data.user)
+        // setLoggedIn(true)
+
+        if (data.user && data.token) {
+            setUser(data.user)
+            setLoggedIn(true)
+        } else {
+            console.log("incorect credentials")
+        }
     } 
     catch(error) 
     {

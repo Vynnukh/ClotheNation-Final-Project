@@ -44,8 +44,9 @@ function App() {
   const [showLogout, setShowLogout] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
   const [user, setUser] = useState()
-  //console.log("LoggedIn & SetLoggedIn in app.js: ", loggedIn, setLoggedIn)
+
   console.log("SetLoggedIn", setLoggedIn)
+
   useEffect(() => {
     (async() => {
       const res = await fetch(`${process.env.REACT_APP_BASE_URL}health`)
@@ -111,9 +112,12 @@ function App() {
           <div className="log">
           <img src={decor2} className="decor2" alt="logo" />
             {loggedIn ?
-          <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
+            <div>
+            <p1>Hello {user}!     </p1>
+            <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
+            </div>  
           :
-          <a href="#" onClick={() => setShow(true)}><Button><a>LogIn</a></Button></a>
+          <a href="#" onClick={() => setShow(true)}><Button><a>Log-in</a></Button></a>
           }
           <img src={decor2} className="decor2" alt="logo" />
           </div>
