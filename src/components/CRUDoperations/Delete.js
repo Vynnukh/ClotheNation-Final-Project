@@ -15,11 +15,11 @@ return (
   <div>
     <form onSubmit ={deleteHandler}>
       <label>Username:
-        <input onChange = {(event) => setUsername(event.target.value)}/>
+        <input onChange = {(event) => setUsername(event.target.value)} required/>
       </label>
       <br></br>
       <label>Password:
-        <input onChange = {(event) => setPassword(event.target.value)}/>
+        <input onChange = {(event) => setPassword(event.target.value)} required/>
       </label>
       <br></br>
       <button className="addButton" type="submit">Click here to Delete User</button>

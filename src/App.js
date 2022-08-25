@@ -77,7 +77,10 @@ function App() {
           </Divlogo>
           <div className="log">
             {loggedIn ?
-          <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log-out</a></Button></a>
+            <div>
+            <p1>Hello {user}!     </p1>
+            <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
+            </div>  
           :
           <a href="#" onClick={() => setShow(true)}><Button><a>Log-in</a></Button></a>
           }
