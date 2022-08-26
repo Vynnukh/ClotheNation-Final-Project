@@ -43,9 +43,8 @@ function App() {
   const [show, setShow] = useState(false)
   const [showLogout, setShowLogout] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
-  const [user, setUser] = useState()
+  const [user, setUser] = useState("")
 
-  console.log("SetLoggedIn", setLoggedIn)
 
   useEffect(() => {
     (async() => {
@@ -113,7 +112,7 @@ function App() {
           <img src={decor2} className="decor2" alt="logo" />
             {loggedIn ?
             <div>
-            <p1>Hello {user}!     </p1>
+            {/* <p1>Hello {user}!</p1> */}
             <a href="#" onClick={() => setShowLogout(true)}><Button><a>Log out</a></Button></a>
             </div>  
           :
