@@ -4,7 +4,6 @@ import {Login} from "../CRUDoperations/Login.js"
 import "../../App.css"
 
 const LoginSignUpModal = (props) => {
-console.log("Props in login modal: ", props)
 
 
     const escapeKeyClose = (x) => {
@@ -36,9 +35,9 @@ console.log("Props in login modal: ", props)
                 <div className="modal-body">
                         <div className="centerModal">
                                 <br></br>
-                                <SignUp setUser = {props.setUser} setLoggedIn = {props.setLoggedIn} loggedIn = {props.loggedIn}/>
+                                <SignUp setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
                                 <br></br>
-                                <Login setUser = {props.setUser} setLoggedIn = {props.setLoggedIn} loggedIn = {props.loggedIn}/>
+                                <Login setUser = {props.setUser} setLoggedIn = {props.setLoggedIn}/>
                         </div>
                     
                 </div>

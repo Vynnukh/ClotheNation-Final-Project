@@ -2,8 +2,7 @@ import {useState} from "react"
 import {signUp} from "../../utils"
 
 const SignUp = ({setUser, setLoggedIn}) => {
-    console.log("set user in signup.js: ", setUser)
-    console.log("set user in signup.js: ", setLoggedIn)
+
     let [username, setUsername] = useState()
     let [email, setEmail] = useState()
     let [password, setPassword] = useState()
